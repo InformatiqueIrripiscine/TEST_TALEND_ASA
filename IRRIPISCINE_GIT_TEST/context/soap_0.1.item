@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_M1kh0NtjEfCab76HryCQgQ" confirmationNeeded="false" name="PREPROD">
+    <contextParameter xmi:id="_M1kh0dtjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Endpoint" prompt="Sage_X3_Soap_Endpoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh0ttjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Lang" prompt="Sage_X3_Soap_Lang?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh09tjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_User" prompt="Sage_X3_Soap_User?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh1NtjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Password" prompt="Sage_X3_Soap_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh1dtjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Folder" prompt="Sage_X3_Soap_Folder?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh1ttjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Config" prompt="Sage_X3_Soap_Config?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh19tjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Article" prompt="Sage_X3_Soap_Article?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh2NtjEfCab76HryCQgQ" comment="" name="soap_prg_name" prompt="soap_prg_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh2dtjEfCab76HryCQgQ" comment="" name="SAV_Sage_SX3_Soap_Endpoint" prompt="SAV_Sage_SX3_Soap_Endpoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh2ttjEfCab76HryCQgQ" comment="" name="SAV_soap_public_name" prompt="SAV_soap_public_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh29tjEfCab76HryCQgQ" comment="" name="SAV_soap_public_name_import" prompt="SAV_soap_public_name_import?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh3NtjEfCab76HryCQgQ" comment="" name="Sage_X3_TRA_Folder" prompt="Sage_X3_TRA_Folder?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1kh3dtjEfCab76HryCQgQ" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_M1kh3ttjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Endpoint" prompt="Sage_X3_Soap_Endpoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh39tjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Lang" prompt="Sage_X3_Soap_Lang?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh4NtjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_User" prompt="Sage_X3_Soap_User?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh4dtjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Password" prompt="Sage_X3_Soap_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh4ttjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Folder" prompt="Sage_X3_Soap_Folder?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh49tjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Config" prompt="Sage_X3_Soap_Config?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh5NtjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Article" prompt="Sage_X3_Soap_Article?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh5dtjEfCab76HryCQgQ" comment="" name="soap_prg_name" prompt="soap_prg_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh5ttjEfCab76HryCQgQ" comment="" name="SAV_Sage_SX3_Soap_Endpoint" prompt="SAV_Sage_SX3_Soap_Endpoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh59tjEfCab76HryCQgQ" comment="" name="SAV_soap_public_name" prompt="SAV_soap_public_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh6NtjEfCab76HryCQgQ" comment="" name="SAV_soap_public_name_import" prompt="SAV_soap_public_name_import?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh6dtjEfCab76HryCQgQ" comment="" name="Sage_X3_TRA_Folder" prompt="Sage_X3_TRA_Folder?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1kh6ttjEfCab76HryCQgQ" confirmationNeeded="false" name="TEST">
+    <contextParameter xmi:id="_M1kh69tjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Endpoint" prompt="Sage_X3_Soap_Endpoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh7NtjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Lang" prompt="Sage_X3_Soap_Lang?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh7dtjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_User" prompt="Sage_X3_Soap_User?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh7ttjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Password" prompt="Sage_X3_Soap_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh79tjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Folder" prompt="Sage_X3_Soap_Folder?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh8NtjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Config" prompt="Sage_X3_Soap_Config?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh8dtjEfCab76HryCQgQ" comment="" name="Sage_X3_Soap_Article" prompt="Sage_X3_Soap_Article?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh8ttjEfCab76HryCQgQ" comment="" name="soap_prg_name" prompt="soap_prg_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh89tjEfCab76HryCQgQ" comment="" name="SAV_Sage_SX3_Soap_Endpoint" prompt="SAV_Sage_SX3_Soap_Endpoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh9NtjEfCab76HryCQgQ" comment="" name="SAV_soap_public_name" prompt="SAV_soap_public_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh9dtjEfCab76HryCQgQ" comment="" name="SAV_soap_public_name_import" prompt="SAV_soap_public_name_import?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1kh9ttjEfCab76HryCQgQ" comment="" name="Sage_X3_TRA_Folder" prompt="Sage_X3_TRA_Folder?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

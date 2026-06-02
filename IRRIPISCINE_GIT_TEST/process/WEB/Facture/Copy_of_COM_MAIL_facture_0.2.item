@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="TEST" jobType="Standard">
+  <context confirmationNeeded="false" name="PROD">
+    <contextParameter comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="server" prompt="server?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="Hôte connexion au serveur FTP" name="Comarch_FTP_Host" prompt="Comarch_FTP_Host?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Utilisateur connexion au serveur FTP" name="Comarch_FTP_Login" prompt="Comarch_FTP_Login?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Mot de passe connexion au serveur FTP" name="Comarch_FTP_Password" prompt="Comarch_FTP_Password?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Port connexion au serveur FTP" name="Comarch_FTP_Port" prompt="Comarch_FTP_Port?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="Comarch_FTP_Web_Input_CDE" prompt="Comarch_FTP_Web_Input_CDE?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Répertoire où doivent se trouver les fichiers sur le serveur FTP" name="Comarch_FTP_Web_Input_LIV" prompt="Comarch_FTP_Web_Input_LIV?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="Repertoire_Local" prompt="Repertoire_Local?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Répertoire où se trouvent les fichiers en local" name="Repertoire_Local_SX3_COM" prompt="Repertoire_Local_SX3_COM?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="context_values"/>
+    <contextParameter comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="PROD_TALEND"/>
+    <contextParameter comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="usr_Talend"/>
+    <contextParameter comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="tLogcatcher"/>
+    <contextParameter comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_Password" value="enc:system.encryption.key.v1:+O4sxb6fYg0MZAXW2IMkQQl5iy4ZZHBzyJdW10M6LnjIFlnM39R27rY="/>
+    <contextParameter comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="anaa"/>
+    <contextParameter comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="instance=X3V12"/>
+    <contextParameter comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="x3v12"/>
+    <contextParameter comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="ETL_USR"/>
+    <contextParameter comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_Password" value="enc:system.encryption.key.v1:uoij3IxiIe9rhv5Obpuin4YXWMHxyxlAm5CMmj4k4N/Qs4oDxwDM"/>
+    <contextParameter comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="IRRI2023"/>
+    <contextParameter comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="TENARARO"/>
+    <contextParameter comment="" name="Splio_Host" prompt="Splio_Host?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Address" prompt="Splio_Mail_Address?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Bcc" prompt="Splio_Mail_Bcc?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Sender_Name" prompt="Splio_Mail_Sender_Name?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Subject" prompt="Splio_Mail_Subject?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Password" prompt="Splio_Password?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Port" prompt="Splio_Port?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Repertoire_Archive_Erreur" prompt="Splio_Repertoire_Archive_Erreur?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Repertoire_Archive_Sans_Erreur" prompt="Splio_Repertoire_Archive_Sans_Erreur?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Username" prompt="Splio_Username?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="TEST">
+    <contextParameter comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="server" prompt="server?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="Hôte connexion au serveur FTP" name="Comarch_FTP_Host" prompt="Comarch_FTP_Host?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Utilisateur connexion au serveur FTP" name="Comarch_FTP_Login" prompt="Comarch_FTP_Login?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Mot de passe connexion au serveur FTP" name="Comarch_FTP_Password" prompt="Comarch_FTP_Password?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Port connexion au serveur FTP" name="Comarch_FTP_Port" prompt="Comarch_FTP_Port?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="Comarch_FTP_Web_Input_CDE" prompt="Comarch_FTP_Web_Input_CDE?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Répertoire où doivent se trouver les fichiers sur le serveur FTP" name="Comarch_FTP_Web_Input_LIV" prompt="Comarch_FTP_Web_Input_LIV?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="Repertoire_Local" prompt="Repertoire_Local?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Répertoire où se trouvent les fichiers en local" name="Repertoire_Local_SX3_COM" prompt="Repertoire_Local_SX3_COM?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="context_values"/>
+    <contextParameter comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="TEST_TALEND"/>
+    <contextParameter comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="usr_Talend"/>
+    <contextParameter comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="tLogcatcher"/>
+    <contextParameter comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_Password" value="enc:system.encryption.key.v1:1ZvXd3zlxNAXim3SuCHAnuS0QKimlnIL0XCDKsecbUSdy3pQ5En2nPk="/>
+    <contextParameter comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="instance=X3V12T"/>
+    <contextParameter comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="x3v12t"/>
+    <contextParameter comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="ETL_USR"/>
+    <contextParameter comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_Password" value="enc:system.encryption.key.v1:K+BupFnaPM3iCzc8bpS74qAvwONIPlKf6x+HwVgeW+Y2OSgEx42a"/>
+    <contextParameter comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="IRRIDEV"/>
+    <contextParameter comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="aratika"/>
+    <contextParameter comment="" name="Splio_Host" prompt="Splio_Host?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Address" prompt="Splio_Mail_Address?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Bcc" prompt="Splio_Mail_Bcc?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Sender_Name" prompt="Splio_Mail_Sender_Name?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Subject" prompt="Splio_Mail_Subject?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Password" prompt="Splio_Password?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Port" prompt="Splio_Port?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Repertoire_Archive_Erreur" prompt="Splio_Repertoire_Archive_Erreur?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Repertoire_Archive_Sans_Erreur" prompt="Splio_Repertoire_Archive_Sans_Erreur?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Username" prompt="Splio_Username?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="PREPROD">
+    <contextParameter comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="server" prompt="server?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="Hôte connexion au serveur FTP" name="Comarch_FTP_Host" prompt="Comarch_FTP_Host?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Utilisateur connexion au serveur FTP" name="Comarch_FTP_Login" prompt="Comarch_FTP_Login?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Mot de passe connexion au serveur FTP" name="Comarch_FTP_Password" prompt="Comarch_FTP_Password?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Port connexion au serveur FTP" name="Comarch_FTP_Port" prompt="Comarch_FTP_Port?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="Comarch_FTP_Web_Input_CDE" prompt="Comarch_FTP_Web_Input_CDE?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Répertoire où doivent se trouver les fichiers sur le serveur FTP" name="Comarch_FTP_Web_Input_LIV" prompt="Comarch_FTP_Web_Input_LIV?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="Repertoire_Local" prompt="Repertoire_Local?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Répertoire où se trouvent les fichiers en local" name="Repertoire_Local_SX3_COM" prompt="Repertoire_Local_SX3_COM?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="context_values"/>
+    <contextParameter comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="PREPROD_TALEND"/>
+    <contextParameter comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="usr_Talend"/>
+    <contextParameter comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="tLogcatcher"/>
+    <contextParameter comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_Password" value="enc:system.encryption.key.v1:vi0Kv8dRJSJn0uQG8x2VIKoHgXthxKedX4n22u9KLvkJ8uJGjn79NyI="/>
+    <contextParameter comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="mataiva"/>
+    <contextParameter comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="instance=X3V12T"/>
+    <contextParameter comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="x3v12t"/>
+    <contextParameter comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="ETL_USR"/>
+    <contextParameter comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_Password" value="enc:system.encryption.key.v1:i6MG0YjpFYtGV7XaKpAUjOzW4vQ0e7HQMrhuWDWuGmFJiUc9v1dq"/>
+    <contextParameter comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="PREPROD"/>
+    <contextParameter comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="aratika"/>
+    <contextParameter comment="" name="Splio_Host" prompt="Splio_Host?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Address" prompt="Splio_Mail_Address?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Bcc" prompt="Splio_Mail_Bcc?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Sender_Name" prompt="Splio_Mail_Sender_Name?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Subject" prompt="Splio_Mail_Subject?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Password" prompt="Splio_Password?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Port" prompt="Splio_Port?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Repertoire_Archive_Erreur" prompt="Splio_Repertoire_Archive_Erreur?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Repertoire_Archive_Sans_Erreur" prompt="Splio_Repertoire_Archive_Sans_Erreur?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Username" prompt="Splio_Username?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="TALEND_X3_V12_PROD_COMARCH_PREPROD">
+    <contextParameter comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="server" prompt="server?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="Hôte connexion au serveur FTP" name="Comarch_FTP_Host" prompt="Comarch_FTP_Host?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Utilisateur connexion au serveur FTP" name="Comarch_FTP_Login" prompt="Comarch_FTP_Login?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Mot de passe connexion au serveur FTP" name="Comarch_FTP_Password" prompt="Comarch_FTP_Password?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Port connexion au serveur FTP" name="Comarch_FTP_Port" prompt="Comarch_FTP_Port?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="Comarch_FTP_Web_Input_CDE" prompt="Comarch_FTP_Web_Input_CDE?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Répertoire où doivent se trouver les fichiers sur le serveur FTP" name="Comarch_FTP_Web_Input_LIV" prompt="Comarch_FTP_Web_Input_LIV?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="Repertoire_Local" prompt="Repertoire_Local?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="Répertoire où se trouvent les fichiers en local" name="Repertoire_Local_SX3_COM" prompt="Repertoire_Local_SX3_COM?" promptNeeded="false" repositoryContextId="_rtX_AITlEeyK8bbl1zzCDg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="instance=X3V12T"/>
+    <contextParameter comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="x3v12t"/>
+    <contextParameter comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="ETL_USR"/>
+    <contextParameter comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_Password" value="enc:system.encryption.key.v1:oaBNIzjCzi3WS2CgtLA1/7J5UgGrXK4pPH1+4I9xzk2St8W9dkIP"/>
+    <contextParameter comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="IRRIDEV"/>
+    <contextParameter comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="aratika"/>
+    <contextParameter comment="" name="Splio_Host" prompt="Splio_Host?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Address" prompt="Splio_Mail_Address?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Bcc" prompt="Splio_Mail_Bcc?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Sender_Name" prompt="Splio_Mail_Sender_Name?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Mail_Subject" prompt="Splio_Mail_Subject?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Password" prompt="Splio_Password?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Port" prompt="Splio_Port?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Repertoire_Archive_Erreur" prompt="Splio_Repertoire_Archive_Erreur?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Repertoire_Archive_Sans_Erreur" prompt="Splio_Repertoire_Archive_Sans_Erreur?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="Splio_Username" prompt="Splio_Username?" promptNeeded="false" repositoryContextId="_IEejQMFGEeyQ3JHbwxqAeQ" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="usr_Talend"/>
+    <contextParameter comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="TALEND_X3_V12_PROD_COMARCH_PREPROD"/>
+    <contextParameter comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_Password" value="enc:system.encryption.key.v1:7S7q8EUcXXX9H3SoCdygi7Xy0cBZJZxHHI0v9J8z9+AtLFsP1MI8xGA="/>
+    <contextParameter comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="mataiva"/>
+    <contextParameter comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="context_values"/>
+    <contextParameter comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="tLogcatcher"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx4096M&quot;,&quot;-Djava.net.preferIPv4Stack=true&quot;]}" show="false"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="true"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="true"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="_HR4msNltEeuwQ4b1YGXRew" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="tMSSqlInput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="JTDS"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;jdbc:jtds:sqlserver://localhost:1433/TEST_TALEND;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;net.sourceforge.jtds.jdbc.Driver&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Server"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Port"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Database" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Schema"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Login"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:wvSeMO5rZO31XkySHZr/zxFyhmzbw/vKWBVMd9jZS7Yugo6WOJxXQ3qY4hwgnswhaEK0tFODBHOvpIqr"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_CtxTb"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="true"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="true"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Talend/TOS_ESB-20200219_1130-V7.3.1/Studio/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tMSSqlOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="JTDS"/>
+    <elementParameter field="TEXT" name="URL" value="" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.localhost_MSSQL_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.localhost_MSSQL_Port"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.localhost_MSSQL_Database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="context.localhost_MSSQL_Database" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.localhost_MSSQL_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.localhost_MSSQL_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.localhost_MSSQL_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:m4w1nkI1ow+WN7D4yfR2ZjGFD/XbCjBjVWV3RZMLegLsRFPXZCBth1g438oR83fppupfh/iOHboXVIGI"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="context.localhost_MSSQL_LogTb"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_f6VCkNftEeu69qB0VN7pEA" name="DataOperation"/>
+    <routinesParameter id="_f8toNtftEeu69qB0VN7pEA" name="Mathematical"/>
+    <routinesParameter id="_f9KUJtftEeu69qB0VN7pEA" name="Numeric"/>
+    <routinesParameter id="_f9dPFtftEeu69qB0VN7pEA" name="Relational"/>
+    <routinesParameter id="_f9wKBtftEeu69qB0VN7pEA" name="StringHandling"/>
+    <routinesParameter id="_f-DsBtftEeu69qB0VN7pEA" name="TalendDataGenerator"/>
+    <routinesParameter id="_f-Wm-dftEeu69qB0VN7pEA" name="TalendDate"/>
+    <routinesParameter id="_f-8c2dftEeu69qB0VN7pEA" name="TalendStringUtil"/>
+    <routinesParameter id="_f-ph6dftEeu69qB0VN7pEA" name="TalendString"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_HR4msNltEeuwQ4b1YGXRew" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="context.localhost_MSSQL_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.localhost_MSSQL_Port"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.localhost_MSSQL_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.localhost_MSSQL_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.localhost_MSSQL_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nJ13cBWiV5PG2SE1fKihXzJL8438ln7+ENS2yp4yxrSfGnjR4XcITKyl32BFKof9xSD6eRNpCKL6C6DB"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.localhost_MSSQL_AdditionalParams"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>localhost_MSSQL&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Récupérer le contexte"/>
+  </node>
+  <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="___g0YNmwEeuvpq-AmIcqPg" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="context.Sage_X3_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.Sage_X3_Port"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.Sage_X3_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.Sage_X3_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.Sage_X3_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:gUr6ZX4fwDxJDbYaOxa4jUynHR2VlqfMAhq89RCdmLSsnuSIRKGz49m9byLF5H4gej458g=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.Sage_X3_AdditionalParams"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>SageX3&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Connexion à la base Sage X3"/>
+  </node>
+  <node componentName="tFTPConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFTPConnection_1" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.Comarch_FTP_Host"/>
+    <elementParameter field="TEXT" name="PORT" value="(Integer.parseInt(context.Comarch_FTP_Port))"/>
+    <elementParameter field="TEXT" name="FTPS_PORT" value="990" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.Comarch_FTP_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:l5Ze/eQi5ihWSl7uhSqonyXBNnF0zTses2COtiifdntRKr/1FvdUSa/qYEmRs/9AaVU1YbBXN8E="/>
+    <elementParameter field="CHECK" name="SFTP" value="true"/>
+    <elementParameter field="CHECK" name="FTPS" value="false" show="false"/>
+    <elementParameter field="FILE" name="KEYSTORE_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="KEYSTORE_PASS" value="enc:system.encryption.key.v1:uNs97JZCsCxwxfgNF4Quo11gfVogeW3pO5pIAVo3h4HDLgwz" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_METHOD" value="PASSWORD"/>
+    <elementParameter field="FILE" name="PRIVATEKEY" value="&quot;/.ssh/id_dsa&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSPHRASE" value="enc:system.encryption.key.v1:I79P3Ef29QduEQZfG9WoZJJG9rH5VKvw4uIVn7cZuWfw2ekh" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECT_MODE" value="ACTIVE" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SECURITY_MODE" value="IMPLICIT" show="false"/>
+    <elementParameter field="CHECK" name="USE_ENCODING" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;1080&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="enc:system.encryption.key.v1:nQ0qmAfVyUdP2RUtXLdVjca4SzOYD6ZyCVFTvSrd" show="false"/>
+    <elementParameter field="OPENED_LIST" name="FTPS_PROT" value="&quot;P&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FTPS_PROTECTION_BUFF_SIZE" value="0" show="false"/>
+    <elementParameter field="CHECK" name="REMOTE_VERIFICATION" value="true" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="0"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>FTP&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Connexion au serveur FTP"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="1920">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMSSqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="1920">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBCommit_1" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="CHECK" name="CLOSE" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>localhost_MSSQL&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Effectuer un COMMIT sur la base de données localhost_MSSQL_Server"/>
+    <metadata connector="FLOW" name="tDBCommit_1"/>
+  </node>
+  <node componentName="tMSSqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="1920">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>localhost_MSSQL&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMSSqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="1920">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_2" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>SageX3&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Fermer la connexion à la base de données Sage X3"/>
+  </node>
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="1920">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.ETL_Main_Dir + &quot;/LOT3/MGT_SX3_COM_cde/Commandes/SAV/&quot; + ((String)globalMap.get(&quot;tFileList_11_CURRENT_FILE&quot;))" show="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;D:/testhhtp/sortie&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PATH" value="context.ETL_Main_Dir + &quot;/LOT3/COM_MAIL_factures/FichiersTransferes/&quot;"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="CHECK" name="FOLDER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="FOLDER_FILE" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note &quot;CURRENT_STATUS&quot; including:&#xA;&quot;File (or path) deleted.&quot;&#xA;&quot;No file (or path) deleted.&quot;&#xA;&quot;File (or path) does not exist or is invalid.&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>Del facture local&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileDelete_1"/>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_3" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_HR4msNltEeuwQ4b1YGXRew" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.localhost_MSSQL_Server"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.localhost_MSSQL_Port"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="context.localhost_MSSQL_Schema"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.localhost_MSSQL_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.localhost_MSSQL_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:iEMGnAw0b5i93qcGp0vIYvRiLUMvaOaEbFB5uDnhzHi/hIuXc20Ix9166JfAh5ZrdIGDS2gerKUn/aht"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_HR4msNltEeuwQ4b1YGXRew - tLogEmailFactureMGT" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;tLogEmailFactureMGT&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT \&quot;&quot;+context.localhost_MSSQL_Schema+&quot;\&quot;.tLogEmailFactureMGT.NumCDE,&#xA;&#x9;&#x9;\&quot;&quot;+context.localhost_MSSQL_Schema+&quot;\&quot;.tLogEmailFactureMGT.EMAIL,&#xA;&#x9;&#x9;\&quot;&quot;+context.localhost_MSSQL_Schema+&quot;\&quot;.tLogEmailFactureMGT.FICHIER_FACTURE,&#xA;&#x9;&#x9;\&quot;&quot;+context.localhost_MSSQL_Schema+&quot;\&quot;.tLogEmailFactureMGT.RESULT,&#xA;&#x9;&#x9;\&quot;&quot;+context.localhost_MSSQL_Schema+&quot;\&quot;.tLogEmailFactureMGT.LAST_MESSAGE,&#xA;&#x9;&#x9;\&quot;&quot;+context.localhost_MSSQL_Schema+&quot;\&quot;.tLogEmailFactureMGT.LAST_EXEC&quot;&#xA;+&quot;&#xA;FROM&#x9;\&quot;&quot;+context.localhost_MSSQL_Schema+&quot;\&quot;.tLogEmailFactureMGT&#xD;&#xA;WHERE RESULT = 1 &quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="id_MSSQL" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.localhost_MSSQL_AdditionalParams"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="NumCDE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMAIL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FICHIER_FACTURE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RESULT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_MESSAGE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_EXEC"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="tLogEmailFactureMGT" name="tDBInput_3">
+      <column comment="" defaultValue="'(NULL)'" key="false" length="50" name="NumCDE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="100" name="EMAIL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="100" name="FICHIER_FACTURE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="1" name="RESULT" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="2147483647" name="LAST_MESSAGE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="23" name="LAST_EXEC" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tUniqRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tUniqRow_1" show="false"/>
+    <elementParameter field="TABLE" name="UNIQUE_KEY">
+      <elementValue elementRef="SCHEMA_COLUMN" value="NumCDE"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMAIL"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FICHIER_FACTURE"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RESULT"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_MESSAGE"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_EXEC"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ONLY_ONCE_EACH_DUPLICATED_KEY" value="false"/>
+    <elementParameter field="CHECK" name="IS_VIRTUAL_COMPONENT" value="false"/>
+    <elementParameter field="OPENED_LIST" name="BUFFER_SIZE" value="M" show="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIRECTORY" value="" show="false"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="tLogEmailFactureMGT" name="tUniqRow_1">
+      <column comment="" defaultValue="'(NULL)'" key="false" length="50" name="NumCDE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="100" name="EMAIL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="100" name="FICHIER_FACTURE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="1" name="RESULT" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="2147483647" name="LAST_MESSAGE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="23" name="LAST_EXEC" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <metadata connector="UNIQUE" label="tLogEmailFactureMGT" name="UNIQUE">
+      <column comment="" defaultValue="'(NULL)'" key="false" length="50" name="NumCDE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="100" name="EMAIL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="100" name="FICHIER_FACTURE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="1" name="RESULT" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="2147483647" name="LAST_MESSAGE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="23" name="LAST_EXEC" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <metadata connector="DUPLICATE" label="tLogEmailFactureMGT" name="DUPLICATE">
+      <column comment="" defaultValue="'(NULL)'" key="false" length="50" name="NumCDE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="100" name="EMAIL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="100" name="FICHIER_FACTURE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="1" name="RESULT" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="2147483647" name="LAST_MESSAGE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="23" name="LAST_EXEC" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_4" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="NumCDE"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMAIL"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FICHIER_FACTURE"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RESULT"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_MESSAGE"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_EXEC"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="tLogEmailFactureMGT" name="tLogRow_4">
+      <column comment="" defaultValue="'(NULL)'" key="false" length="50" name="NumCDE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="100" name="EMAIL" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="100" name="FICHIER_FACTURE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="1" name="RESULT" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="2147483647" name="LAST_MESSAGE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'(NULL)'" key="false" length="23" name="LAST_EXEC" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_3" show="false"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
+    <elementParameter field="TABLE" name="MAP" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_3"/>
+  </node>
+  <node componentName="tFTPRename" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1760" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFTPRename_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tFTPConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="21" show="false"/>
+    <elementParameter field="TEXT" name="FTPS_PORT" value="990" show="false"/>
+    <elementParameter field="TEXT" name="USERNAME" value="&quot;anonymous&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:/LUg5AM1gYo/+9QSnIO8YOIiFuJk5Lhgg32b9kRjTJf9h6cT3Op7" show="false"/>
+    <elementParameter field="CHECK" name="SFTP" value="false" show="false"/>
+    <elementParameter field="CHECK" name="FTPS" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_METHOD" value="PASSWORD" show="false"/>
+    <elementParameter field="FILE" name="PRIVATEKEY" value="&quot;/.ssh/id_dsa&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSPHRASE" value="enc:system.encryption.key.v1:tPYMeYwevfWedy41yOiMxyz519jshX7HFHoKXxfF8UZgPZ+Q" show="false"/>
+    <elementParameter field="FILE" name="KEYSTORE_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="KEYSTORE_PASS" value="enc:system.encryption.key.v1:jAH90NS0i3FhCROku+st5TJZTz2hWRZ9E05b80DmP3NNT3Qg" show="false"/>
+    <elementParameter field="TEXT" name="REMOTEDIR" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="MOVE_TO_THE_CURRENT_DIRECTORY" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="OVERWRITE" value="always" show="false"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;/WEB/OUTPUT/Files/&quot;+((String)globalMap.get(&quot;row10.FICHIER_FACTURE&quot;))"/>
+      <elementValue elementRef="NEWNAME" value="&quot;/WEB/OUTPUT/Archives/&quot;+((String)globalMap.get(&quot;row10.FICHIER_FACTURE&quot;))"/>
+      <elementValue elementRef="FILEMASK" value="&quot;/WEB/OUTPUT/Files/&quot;+((String)globalMap.get(&quot;row10.FICHIER_FACTURE&quot;)).replace(&quot;PDF&quot;,&quot;TXT&quot;)"/>
+      <elementValue elementRef="NEWNAME" value="&quot;/WEB/OUTPUT/Archives/&quot;+((String)globalMap.get(&quot;row10.FICHIER_FACTURE&quot;)).replace(&quot;PDF&quot;,&quot;TXT&quot;)"/>
+    </elementParameter>
+    <elementParameter field="CLOSED_LIST" name="CONNECT_MODE" value="PASSIVE" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SECURITY_MODE" value="IMPLICIT" show="false"/>
+    <elementParameter field="CHECK" name="USE_ENCODING" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;1080&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="enc:system.encryption.key.v1:G9tH8GlfQi6GF9N5dDr+I4AwScmdg9QTxKI+MCZ1" show="false"/>
+    <elementParameter field="CHECK" name="IGNORE_FAILURE_AT_QUIT" value="false" show="false"/>
+    <elementParameter field="OPENED_LIST" name="FTPS_PROT" value="&quot;P&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FTPS_PROTECTION_BUFF_SIZE" value="0" show="false"/>
+    <elementParameter field="CHECK" name="REMOTE_VERIFICATION" value="true" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="0" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>Move facture dossier archive&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFTPRename_1"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDBConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBConnection_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_2" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_2" target="tFTPConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tDBCommit_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBCommit_1" offsetLabelX="0" offsetLabelY="0" source="tDBCommit_1" target="tDBClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBClose_1" offsetLabelX="0" offsetLabelY="0" source="tDBClose_1" target="tDBClose_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBClose_2" offsetLabelX="0" offsetLabelY="0" source="tDBClose_2" target="tFileDelete_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tUniqRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="UNIQUE" label="row15" lineStyle="0" metaname="UNIQUE" offsetLabelX="0" offsetLabelY="0" source="tUniqRow_1" target="tLogRow_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tLogRow_4" offsetLabelX="0" offsetLabelY="0" source="tLogRow_4" target="tFlowToIterate_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_3" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_3" target="tFTPRename_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate4" show="false"/>
+  </connection>
+  <note opaque="true" posX="-32" posY="0" sizeHeight="97" sizeWidth="225" text="Pré-requis exécution job&#xD;&#xA;&#xD;&#xA;Connexion aux bases,&#xD;&#xA;définition connexion"/>
+  <subjob>
+    <elementParameter field="CHECK" name="COLLAPSED" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFTPConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBCommit_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

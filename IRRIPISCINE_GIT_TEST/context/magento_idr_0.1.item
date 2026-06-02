@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_Ik9mFGTAEeyYfs6YLjZ53w" confirmationNeeded="false" name="TEST">
+    <contextParameter xmi:id="_Ik9mFWTAEeyYfs6YLjZ53w" comment="" name="Magento_url_idr" prompt="Magento_url_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Ik9mFmTAEeyYfs6YLjZ53w" comment="" name="Magento_username_idr" prompt="Magento_username_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Ik9mF2TAEeyYfs6YLjZ53w" comment="" name="Magento_password_idr" prompt="Magento_password_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_FoJ54GTEEeyYfs6YLjZ53w" comment="" name="Magento_authorization_idr" prompt="Magento_authorization_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_-fiWoGjPEeyK3fv2EFUJjg" comment="Date d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Date_Stock" prompt="Last_Exec_Date_Stock?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_-fiWoWjPEeyK3fv2EFUJjg" comment="Heure d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Heure_Stock" prompt="Last_Exec_Heure_Stock?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWgGomEeyK3fv2EFUJjg" comment="Date d'exécution du job SX3_MGT_base_price" name="Last_Exec_Date_Tarif_Catalogue" prompt="Last_Exec_Date_Tarif_Catalogue?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWgWomEeyK3fv2EFUJjg" comment="Heure d'exécution du job SX3_MGT_base_price" name="Last_Exec_Heure_Tarif_Catalogue" prompt="Last_Exec_Heure_Tarif_Catalogue?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWgmomEeyK3fv2EFUJjg" comment="Date d'exécution du job SX3_MGT_special_price" name="Last_Exec_Date_Tarif_Promo" prompt="Last_Exec_Date_Tarif_Promo?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWg2omEeyK3fv2EFUJjg" comment="Heure d'exécution du job SX3_MGT_special_price" name="Last_Exec_Heure_Tarif_Promo" prompt="Last_Exec_Heure_Tarif_Promo?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_ZmM8UH9VEeyK8bbl1zzCDg" comment="Date d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Date_EtatCommande_Web" prompt="Last_Exec_Date_EtatCommande_Web?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_ZmM8UX9VEeyK8bbl1zzCDg" comment="Heure d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Heure_EtatCommande_Web" prompt="Last_Exec_Heure_EtatCommande_Web?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Jc_JACyNEe-d9vKYXwHxMw" comment="" name="Magento_store_id_idr" prompt="Magento_store_id_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_CKKw0D9TEe-eErVpqLB2Xg" comment="" name="Comarch_api_url" prompt="Comarch_api_url?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_CKKw0T9TEe-eErVpqLB2Xg" comment="" name="Comarch_x_api_key" prompt="Comarch_x_api_key?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_Ik9mGGTAEeyYfs6YLjZ53w" confirmationNeeded="false" name="PREPROD">
+    <contextParameter xmi:id="_Ik9mGWTAEeyYfs6YLjZ53w" comment="" name="Magento_url_idr" prompt="Magento_url_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Ik9mGmTAEeyYfs6YLjZ53w" comment="" name="Magento_username_idr" prompt="Magento_username_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Ik9mG2TAEeyYfs6YLjZ53w" comment="" name="Magento_password_idr" prompt="Magento_password_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_FoJ54WTEEeyYfs6YLjZ53w" comment="" name="Magento_authorization_idr" prompt="Magento_authorization_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_-fiWomjPEeyK3fv2EFUJjg" comment="Date d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Date_Stock" prompt="Last_Exec_Date_Stock?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_-fiWo2jPEeyK3fv2EFUJjg" comment="Heure d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Heure_Stock" prompt="Last_Exec_Heure_Stock?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWhGomEeyK3fv2EFUJjg" comment="Date d'exécution du job SX3_MGT_base_price" name="Last_Exec_Date_Tarif_Catalogue" prompt="Last_Exec_Date_Tarif_Catalogue?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWhWomEeyK3fv2EFUJjg" comment="Heure d'exécution du job SX3_MGT_base_price" name="Last_Exec_Heure_Tarif_Catalogue" prompt="Last_Exec_Heure_Tarif_Catalogue?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWhmomEeyK3fv2EFUJjg" comment="Date d'exécution du job SX3_MGT_special_price" name="Last_Exec_Date_Tarif_Promo" prompt="Last_Exec_Date_Tarif_Promo?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWh2omEeyK3fv2EFUJjg" comment="Heure d'exécution du job SX3_MGT_special_price" name="Last_Exec_Heure_Tarif_Promo" prompt="Last_Exec_Heure_Tarif_Promo?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_ZmM8Un9VEeyK8bbl1zzCDg" comment="Date d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Date_EtatCommande_Web" prompt="Last_Exec_Date_EtatCommande_Web?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_ZmM8U39VEeyK8bbl1zzCDg" comment="Heure d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Heure_EtatCommande_Web" prompt="Last_Exec_Heure_EtatCommande_Web?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Jc_JASyNEe-d9vKYXwHxMw" comment="" name="Magento_store_id_idr" prompt="Magento_store_id_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_CKKw0j9TEe-eErVpqLB2Xg" comment="" name="Comarch_api_url" prompt="Comarch_api_url?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_CKKw0z9TEe-eErVpqLB2Xg" comment="" name="Comarch_x_api_key" prompt="Comarch_x_api_key?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_Ik9mHGTAEeyYfs6YLjZ53w" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_Ik9mHWTAEeyYfs6YLjZ53w" comment="" name="Magento_url_idr" prompt="Magento_url_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Ik9mHmTAEeyYfs6YLjZ53w" comment="" name="Magento_username_idr" prompt="Magento_username_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Ik9mH2TAEeyYfs6YLjZ53w" comment="" name="Magento_password_idr" prompt="Magento_password_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_FoJ54mTEEeyYfs6YLjZ53w" comment="" name="Magento_authorization_idr" prompt="Magento_authorization_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_-fiWpGjPEeyK3fv2EFUJjg" comment="Date d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Date_Stock" prompt="Last_Exec_Date_Stock?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_-fiWpWjPEeyK3fv2EFUJjg" comment="Heure d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Heure_Stock" prompt="Last_Exec_Heure_Stock?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWiGomEeyK3fv2EFUJjg" comment="Date d'exécution du job SX3_MGT_base_price" name="Last_Exec_Date_Tarif_Catalogue" prompt="Last_Exec_Date_Tarif_Catalogue?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWiWomEeyK3fv2EFUJjg" comment="Heure d'exécution du job SX3_MGT_base_price" name="Last_Exec_Heure_Tarif_Catalogue" prompt="Last_Exec_Heure_Tarif_Catalogue?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWimomEeyK3fv2EFUJjg" comment="Date d'exécution du job SX3_MGT_special_price" name="Last_Exec_Date_Tarif_Promo" prompt="Last_Exec_Date_Tarif_Promo?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_m2vWi2omEeyK3fv2EFUJjg" comment="Heure d'exécution du job SX3_MGT_special_price" name="Last_Exec_Heure_Tarif_Promo" prompt="Last_Exec_Heure_Tarif_Promo?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_ZmM8VH9VEeyK8bbl1zzCDg" comment="Date d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Date_EtatCommande_Web" prompt="Last_Exec_Date_EtatCommande_Web?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_ZmM8VX9VEeyK8bbl1zzCDg" comment="Heure d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Heure_EtatCommande_Web" prompt="Last_Exec_Heure_EtatCommande_Web?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Jc_JAiyNEe-d9vKYXwHxMw" comment="" name="Magento_store_id_idr" prompt="Magento_store_id_idr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_CKKw1D9TEe-eErVpqLB2Xg" comment="" name="Comarch_api_url" prompt="Comarch_api_url?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_CKKw1T9TEe-eErVpqLB2Xg" comment="" name="Comarch_x_api_key" prompt="Comarch_x_api_key?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

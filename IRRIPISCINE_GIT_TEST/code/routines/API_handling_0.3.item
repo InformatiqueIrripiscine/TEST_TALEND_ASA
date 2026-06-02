@@ -1,0 +1,488 @@
+package routines;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+//import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Scanner;
+import routines.system.JSONException;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class API_handling {
+	
+	public static String streamToString(InputStream inputStream) {
+        @SuppressWarnings("resource")
+		String text = new Scanner(inputStream, "UTF-8").useDelimiter("\\Z").next();
+        return text;
+      }
+	  
+	  /**
+       * callApi: Call Api.
+       * 
+       * 
+       * {talendTypes} String
+       * 
+       * {Category} API_handling
+       * 
+       * {param} string(urlQueryString) input: The string need to be printed.
+       * {param} string(fileDir) input: The string need to be printed.
+       * {param} string(fileName) input: The string need to be printed.
+       * {param} string(fileExt) input: The string need to be printed.
+       * {param} string(token) input: The string need to be printed.
+       * {param} string(numPage) input: The string need to be printed.
+       * 
+       * {example} callApi(urlQueryString, fileDir, fileName, fileExt, token, numPage).
+       */
+    	
+    	private static String callApi(String urlQueryString, String fileDir, String fileName,
+    			String fileExt, String token, int numPage) throws JSONException, IOException {
+  		
+    		String result = "";
+      		String jsonErr = "";
+	        String json = null;
+	        URL url = new URL(urlQueryString);
+	        //System.out.println("urlQueryString : "+urlQueryString);
+	        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		    
+	        try {
+	          connection.setDoOutput(true);
+	          connection.setInstanceFollowRedirects(false);
+	          connection.setRequestMethod("GET");
+	          connection.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
+	          connection.setRequestProperty("Authorization", token);
+	          connection.connect();
+	          InputStream inStream = connection.getInputStream();
+	          json = streamToString(inStream);
+	        } catch (IOException ex) {
+	          //ex.printStackTrace();
+	          InputStream inStream = connection.getErrorStream();
+  	          jsonErr = streamToString(inStream);
+  	          //System.out.println("jsonErr : "+jsonErr);
+	        }
+	        
+	        result = JSON_handling.JsonFormatter(json, 4);
+	        writeFile(JSON_handling.JsonFormatter(result, 4), fileDir, fileName+numPage+fileExt);
+	        return result;
+	        
+    }
+    	
+      	/**
+         * writeFile: write request in a new file.
+         * 
+         * 
+         * {talendTypes} String
+         * 
+         * {Category} API_handling
+         * 
+         * {param} string(JsonStr) input: The string need to be printed.
+         * {param} string(fileDir) input: The string need to be printed.
+         * {param} string(fileName) input: The string need to be printed.
+         * 
+         * {example} writeFile(JsonStr, fileDir, fileName).
+         */
+      	
+    	public static void writeFile(String JsonStr, String fileDir, String fileName) throws IOException {
+      		
+    		if (JsonStr != null && !JsonStr.trim().equals(""))
+    		{
+	    		File fPath = new File(fileDir);
+	    		
+	    			if (!fPath.exists())
+	    			{
+	    				fPath.mkdir();
+	    	        }    
+	    		
+	    		//BufferedWriter writer = new BufferedWriter(new FileWriter(fileDir+fileName));
+	    			
+	    		//UTF-8
+	    		Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileDir+fileName), "UTF-8"));
+	    			    out.write(xmlEntitify(JsonStr));
+	    			    out.close();
+
+	    		
+	      		    
+	      		    //writer.write(JsonStr);
+	      		    //System.out.println("Write Json : " + fileDir+fileName);
+	      		     
+	      		    //writer.close();
+    		}
+    		
+    		else System.out.println("There is no data to write");
+      	}
+	  
+	  /**
+       * ApiRequestAllPages: Retrieve all pages for one call.
+       * 
+       * 
+       * {talendTypes} String
+       * 
+       * {Category} API_handling
+       * 
+       * {param} string(urlQueryString) input: The string need to be printed.
+       * {param} string(fileDir) input: The string need to be printed.
+       * {param} string(fileName) input: The string need to be printed.
+       * {param} string(fileExt) input: The string need to be printed.
+       * {param} string(token) input: The string need to be printed.
+       * 
+       * {example} ApiRequestAllPages(urlQueryString, fileDir, fileName, fileExt, token).
+       */
+    	
+    	public static void ApiRequestAllPages(String urlQueryString, String fileDir, String fileName,
+    			String fileExt, String token) throws JSONException, IOException {
+  		
+  		String result = "";
+  		int numPage = 1;
+		    
+	        result = callApi(urlQueryString, fileDir, fileName,fileExt, token, numPage);
+	        
+	        while (result.contains("\"next\""))
+	        	{
+	        		numPage = numPage +1;
+	        		String NewUrl = result.split("\"next\"")[1].split("\"},")[0].replace(": {\"href\": \"", "");
+	        				//.replace("page&limit=10", "page&limit=30");
+	        		//System.out.println("NewUrl : " + NewUrl);
+	        		result = callApi(NewUrl, fileDir, fileName,fileExt, token, numPage);
+	        	}
+	   }
+    	
+        /**
+         * postApi: Post API, to create new data.
+         * 
+         * 
+         * {talendTypes} String
+         * 
+         * {Category} API_handling
+         * 
+         * {param} string(urlQueryString) input: The string need to be printed.
+         * {param} string(jsonInputString) input: The string need to be printed.
+         * {param} string(token) input: The string need to be printed.
+         * 
+         * {example} postApi(urlQueryString, jsonInputString, token).
+         * 
+         * @throws IOException 
+         */
+        public static String postApi(String urlQueryString, String jsonInputString, String token) 
+        		throws IOException {
+        	
+        	String jsonErr = "";
+        	URL url = new URL (urlQueryString);
+        	HttpURLConnection con = (HttpURLConnection)url.openConnection();
+        	con.setRequestMethod("POST");
+        	con.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
+        	con.setRequestProperty("Accept", "application/json");
+        	con.setRequestProperty("Authorization", token);
+        	con.setDoOutput(true);
+        	
+        	try(OutputStream os = con.getOutputStream()) {
+        	    byte[] input = jsonInputString.getBytes("utf-8");
+        	    os.write(input, 0, input.length);           
+        	}
+        	
+        	try(BufferedReader br = new BufferedReader(
+        			  new InputStreamReader(con.getInputStream(), "utf-8"))) {
+        			    StringBuilder response = new StringBuilder();
+        			    String responseLine = null;
+        			    while ((responseLine = br.readLine()) != null) {
+        			        response.append(responseLine.trim());
+        			    }
+        			    
+        			}
+        	catch (IOException ex) {
+  	          //ex.printStackTrace();
+  	          InputStream inStream = con.getErrorStream();
+  	          jsonErr = streamToString(inStream);
+  	        }
+        	jsonErr = JSON_handling.JsonFormatter(jsonErr, 4);
+        	return jsonErr;
+
+        }
+        
+        /**
+         * getApi: Get API, to verify data.
+         * 
+         * 
+         * {talendTypes} String
+         * 
+         * {Category} API_handling
+         * 
+         * {param} string(urlQueryString) input: The string need to be printed.
+         * {param} string(token) input: The string need to be printed.
+         * 
+         * {example} getApi(urlQueryString, token).
+         * 
+         * @throws IOException 
+         */
+        public static String getApi(String urlQueryString, String token) 
+        		throws IOException {
+        	
+	        String json = "";
+	        URL url = new URL(urlQueryString);
+	        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		    
+	        try {
+	          connection.setDoOutput(true);
+	          connection.setInstanceFollowRedirects(false);
+	          connection.setRequestMethod("GET");
+	          connection.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
+	          connection.setRequestProperty("Authorization", token);
+	          connection.connect();
+	          InputStream inStream = connection.getInputStream();
+	          json = streamToString(inStream);
+	        } catch (IOException ex) {
+	          //ex.printStackTrace();
+	          InputStream inStream = connection.getErrorStream();
+	          json = streamToString(inStream);
+	        }
+        	
+        	return json;
+
+        }
+        
+        /**
+         * VerifyParent: Verify if parent exist, if not post it
+         * 
+         * 
+         * {talendTypes} String
+         * 
+         * {Category} API_handling
+         * 
+         * {param} string(code) input: The string need to be printed.
+         * {param} string(URL) input: The string need to be printed.
+         * {param} string(token) input: The string need to be printed.
+         * 
+         * {example} VerifyParent(code, URL, token)).
+         * 
+         * @throws IOException 
+         */
+        /*public static void VerifyParent(String code, String URL, String token) 
+        		throws IOException {
+        	
+        	String parent = MondialTissus_Rules.codeParent(code);
+        	String listParent = "";
+        	
+        	String ResponseGet = API_handling.getApi(URL+"/"+parent, token);       	
+        	
+        	while (ResponseGet.contains("does not exist"))
+        	{
+        		listParent = listParent + parent + "£";
+        		parent = MondialTissus_Rules.codeParent(parent);
+        		ResponseGet = API_handling.getApi(URL+"/"+parent, token);
+        	}
+        	
+        	int nb_parent = StringHandling.COUNT(listParent, "£");
+        	
+        	for(int i = 0; i < nb_parent; i++)
+        	{
+        		parent = listParent.split("£")[i];
+        		String jsonCat = JSON_handling.jsonCategories(parent, MondialTissus_Rules.codeParent(parent), "");
+        		API_handling.postApi(URL, jsonCat, token);
+        	}
+        	
+        }*/
+        
+        /**
+         * patchApi: Post API, to update data.
+         * 
+         * 
+         * {talendTypes} String
+         * 
+         * {Category} API_handling
+         * 
+         * {param} string(urlQueryString) input: The string need to be printed.
+         * {param} string(jsonInputString) input: The string need to be printed.
+         * {param} string(token) input: The string need to be printed.
+         * 
+         * {example} patchApi(urlQueryString, jsonInputString, token).
+         * 
+         * @throws IOException 
+         */
+        public static String patchApi(String urlQueryString, String jsonInputString, String token) 
+        		throws IOException {
+        	
+        	String jsonErr = "";
+        	URL url = new URL (urlQueryString);
+        	HttpURLConnection con = (HttpURLConnection)url.openConnection();
+        	con.setRequestProperty("X-HTTP-Method-Override", "PATCH");
+        	con.setRequestMethod("POST");
+        	con.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
+        	con.setRequestProperty("Accept", "application/json");
+        	con.setRequestProperty("Authorization", token);
+        	con.setDoOutput(true);
+        	
+        	try(OutputStream os = con.getOutputStream()) {
+        	    byte[] input = jsonInputString.getBytes("utf-8");
+        	    os.write(input, 0, input.length);           
+        	}
+        	
+        	try(BufferedReader br = new BufferedReader(
+        			  new InputStreamReader(con.getInputStream(), "utf-8"))) {
+        			    StringBuilder response = new StringBuilder();
+        			    String responseLine = null;
+        			    while ((responseLine = br.readLine()) != null) {
+        			        response.append(responseLine.trim());
+        			    }
+        			    
+        			}
+        	catch (IOException ex) {
+  	          //ex.printStackTrace();
+  	          InputStream inStream = con.getErrorStream();
+  	          jsonErr = streamToString(inStream);
+  	        }
+        	//jsonErr = JSON_handling.JsonFormatter(jsonErr, 4);
+        	return jsonErr;
+
+        }
+        
+        /**
+         * xmlEntitify: Remove strange character from XML format.
+         * 
+         * 
+         * {talendTypes} String
+         * 
+         * {Category} API_handling
+         * 
+         * {param} string(in) input: The string need to be printed.
+         * 
+         * {example} xmlEntitify(in).
+         * 
+         * @throws IOException 
+         */
+        public static String xmlEntitify(String in){
+
+            StringBuffer b = new StringBuffer();
+
+            for (int i=0;i<in.length();i++){
+
+                Character c = in.charAt(i);
+                if (c<128){
+                    b.append(c);
+                }
+                else if (c=='\ufeff'){
+                    // BOM character, just remove it
+                }
+                else {
+                    String cstr = Integer.toHexString(c).toUpperCase();
+                    while(cstr.length()<4){
+                        cstr="0"+cstr;
+                    }
+                    b.append("&#x");
+                    b.append(cstr);
+                    b.append(";");
+                }
+            }
+            return b.toString();
+        }
+        /**
+         * PatchProductApi: Post API, to create new data.
+         * 
+         * 
+         * {talendTypes} String
+         * 
+         * {Category} API_handling
+         * 
+         * {param} string(urlQueryString) input: The string need to be printed.
+         * {param} string(jsonInputString) input: The string need to be printed.
+         * {param} string(token) input: The string need to be printed.
+         * 
+         * {example} postApi(urlQueryString, jsonInputString, token).
+         * 
+         * @throws IOException 
+         */
+        public static String PatchProductApi(String urlQueryString, String jsonInputString, String token) 
+        		throws IOException {
+        	
+        	String jsonErr = "";
+        	String jsonOK = "";
+        	URL url = new URL(urlQueryString);
+        	HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        	con.setRequestMethod("POST"); // Utilisez POST
+        	con.setRequestProperty("X-HTTP-Method-Override", "PATCH"); // En-tête spécial pour indiquer PATCH
+        	con.setRequestProperty("Content-Type", "application/vnd.akeneo.collection+json;charset=UTF-8");
+        	con.setRequestProperty("Accept", "application/json");
+        	con.setRequestProperty("Authorization", token);
+        	con.setDoOutput(true); // Permet d'envoyer des données dans la requête
+
+        	// Envoyer les données dans la requête
+        	try (OutputStream os = con.getOutputStream()) {
+        	    byte[] input = jsonInputString.getBytes("utf-8");
+        	    os.write(input, 0, input.length);           
+        	}
+
+        	// Lire la réponse de l'API
+        	try (BufferedReader br = new BufferedReader(
+        	        new InputStreamReader(con.getInputStream(), "utf-8"))) {
+        	    StringBuilder response = new StringBuilder();
+        	    String responseLine = null;
+        	    while ((responseLine = br.readLine()) != null) {
+        	        response.append(responseLine.trim());
+        	    }
+        	    
+        	    // Afficher la réponse
+        	    //System.out.println("Réponse de l'API : " + response.toString());
+        	    jsonOK = response.toString();
+        	    
+        	}
+
+        	catch (IOException ex) {
+  	          //ex.printStackTrace();
+  	          InputStream inStream = con.getErrorStream();
+  	          jsonErr = streamToString(inStream);
+  	        
+  	        }
+        	jsonErr = JSON_handling.JsonFormatter(jsonErr, 4);
+        	//System.out.println("Réponse de l'API : " +  jsonErr);
+
+        		return "RETOURAPIOK"+jsonOK + "SEPARATEUR_REPONSE" +"RETOURAPIKO"+ jsonErr;
+
+
+        }
+        
+        /**
+         * streanToString: Remove strange character from XML format.
+         * 
+         * 
+         * {talendTypes} String
+         * 
+         * {Category} API_handling
+         * 
+         * {param} string(inStream) input: The string need to be printed.
+         * 
+         * {example} streanToString(inStream).
+         * 
+         * @throws IOException 
+         */
+        
+        public static InputStream streanToString(String inStream) 
+        		  throws IOException {
+        		    InputStream targetStream = new ByteArrayInputStream(inStream.getBytes());
+        		    return targetStream;
+        		}
+      	
+}

@@ -1,0 +1,36 @@
+**/jobInfo.properties
+.JETEmitters/
+.Java/
+.metadata/
+**/code/routines/system/*.*
+**/temp/
+**/sqlPatterns/
+**/talend.project
+poms/
+temp/
+*.screenshot
+
+# Bin et target Maven
+**/target/
+**/bin/
+
+# Logs Talend
+*.log
+.log
+
+# Fichiers de lock
+*.lock
+.lock
+
+# Caches
+.tmp/
+.cache/
+
+# IDE
+.classpath
+.project
+.settings/
+
+# Stats et profiling
+**/talendStats/
+**/talendLog/

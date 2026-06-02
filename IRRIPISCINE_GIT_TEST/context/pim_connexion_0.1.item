@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_M1axDdtjEfCab76HryCQgQ" confirmationNeeded="false" name="PREPROD">
+    <contextParameter xmi:id="_M1axDttjEfCab76HryCQgQ" comment="" name="Pim_url" prompt="Pim_url?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axD9tjEfCab76HryCQgQ" comment="" name="Pim_clientId" prompt="Pim_clientId?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axENtjEfCab76HryCQgQ" comment="" name="Pim_secret" prompt="Pim_secret?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axEdtjEfCab76HryCQgQ" comment="" name="Pim_username" prompt="Pim_username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axEttjEfCab76HryCQgQ" comment="" name="Pim_password" prompt="Pim_password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axE9tjEfCab76HryCQgQ" comment="" name="Pim_base64ClientIdSecret" prompt="Pim_base64ClientIdSecret?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axFNtjEfCab76HryCQgQ" comment="" name="Pim_authorization" prompt="Pim_authorization?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axFdtjEfCab76HryCQgQ" comment="" name="Last_Exec_PIM_X3" prompt="Last_Exec_PIM_X3?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1axFttjEfCab76HryCQgQ" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_M1axF9tjEfCab76HryCQgQ" comment="" name="Pim_url" prompt="Pim_url?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axGNtjEfCab76HryCQgQ" comment="" name="Pim_clientId" prompt="Pim_clientId?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axGdtjEfCab76HryCQgQ" comment="" name="Pim_secret" prompt="Pim_secret?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axGttjEfCab76HryCQgQ" comment="" name="Pim_username" prompt="Pim_username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axG9tjEfCab76HryCQgQ" comment="" name="Pim_password" prompt="Pim_password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axHNtjEfCab76HryCQgQ" comment="" name="Pim_base64ClientIdSecret" prompt="Pim_base64ClientIdSecret?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axHdtjEfCab76HryCQgQ" comment="" name="Pim_authorization" prompt="Pim_authorization?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axHttjEfCab76HryCQgQ" comment="" name="Last_Exec_PIM_X3" prompt="Last_Exec_PIM_X3?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1axH9tjEfCab76HryCQgQ" confirmationNeeded="false" name="TEST">
+    <contextParameter xmi:id="_M1axINtjEfCab76HryCQgQ" comment="" name="Pim_url" prompt="Pim_url?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axIdtjEfCab76HryCQgQ" comment="" name="Pim_clientId" prompt="Pim_clientId?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axIttjEfCab76HryCQgQ" comment="" name="Pim_secret" prompt="Pim_secret?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axI9tjEfCab76HryCQgQ" comment="" name="Pim_username" prompt="Pim_username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axJNtjEfCab76HryCQgQ" comment="" name="Pim_password" prompt="Pim_password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axJdtjEfCab76HryCQgQ" comment="" name="Pim_base64ClientIdSecret" prompt="Pim_base64ClientIdSecret?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axJttjEfCab76HryCQgQ" comment="" name="Pim_authorization" prompt="Pim_authorization?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axJ9tjEfCab76HryCQgQ" comment="" name="Last_Exec_PIM_X3" prompt="Last_Exec_PIM_X3?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

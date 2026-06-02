@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_cJOecBeAEe-Ivfi4PNC2-A" name="FreshSales_Retour_Contacts_PUT" dataPackage="_cJPFhheAEe-Ivfi4PNC2-A" JSONFilePath="C:/Users/asaid.ext.IRRI/Desktop/retour_freshWorkput.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_cJPFgBeAEe-Ivfi4PNC2-A" LimitBoucle="50" AbsoluteXPathQuery="$.contact">
+      <schemaTargets xmi:id="_cJPFgReAEe-Ivfi4PNC2-A" RelativeXPathQuery="id" TagName="id"/>
+      <schemaTargets xmi:id="_cJPFgheAEe-Ivfi4PNC2-A" RelativeXPathQuery="email" TagName="email"/>
+      <schemaTargets xmi:id="_cJPFgxeAEe-Ivfi4PNC2-A" RelativeXPathQuery="custom_field.cf_id_comarch" TagName="cf_id_comarch"/>
+      <schemaTargets xmi:id="_cJPFhBeAEe-Ivfi4PNC2-A" RelativeXPathQuery="custom_field.cf_id_rcu" TagName="cf_id_rcu"/>
+      <schemaTargets xmi:id="_cJPFhReAEe-Ivfi4PNC2-A" RelativeXPathQuery="custom_field.cf_lien_vers_zefid" TagName="cf_lien_vers_zefid"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_cJPFhheAEe-Ivfi4PNC2-A" name="default" dataManager="_cJOecBeAEe-Ivfi4PNC2-A">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_cJPFhxeAEe-Ivfi4PNC2-A" id="_8UPC0Bd_Ee-Ivfi4PNC2-A" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cJPFiBeAEe-Ivfi4PNC2-A" label="id" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cJPFiReAEe-Ivfi4PNC2-A" label="email" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cJPFiheAEe-Ivfi4PNC2-A" label="cf_id_comarch" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cJPFixeAEe-Ivfi4PNC2-A" label="cf_id_rcu" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cJPFjBeAEe-Ivfi4PNC2-A" label="cf_lien_vers_zefid" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

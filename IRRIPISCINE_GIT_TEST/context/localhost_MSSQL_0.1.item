@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_M1aw0NtjEfCab76HryCQgQ" confirmationNeeded="false" name="PREPROD">
+    <contextParameter xmi:id="_M1aw0dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" type="id_String" value="usr_Talend"/>
+    <contextParameter xmi:id="_M1aw0ttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1aw09tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter xmi:id="_M1aw1NtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" type="id_String" value="PREPROD_TALEND"/>
+    <contextParameter xmi:id="_M1aw1dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_M1aw1ttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:FCiHPfhm+dMdDm5m0LJd4ZjoKx6F/ZnediAEFRvH16BXeU4fA1vO6YM="/>
+    <contextParameter xmi:id="_M1aw19tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" type="id_String" value="mataiva"/>
+    <contextParameter xmi:id="_M1aw2NtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" type="id_String" value="context_values"/>
+    <contextParameter xmi:id="_M1aw2dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" type="id_String" value="tLogcatcher"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1aw2ttjEfCab76HryCQgQ" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_M1aw29tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" type="id_String" value="usr_Talend"/>
+    <contextParameter xmi:id="_M1aw3NtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1aw3dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter xmi:id="_M1aw3ttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" type="id_String" value="PROD_TALEND"/>
+    <contextParameter xmi:id="_M1aw39tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_M1aw4NtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:w0lhP2yRUfspE0PdTn78ANfmdiKL4t5rncFPm/HUkRxel8Q0B5yEBQk="/>
+    <contextParameter xmi:id="_M1aw4dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" type="id_String" value="anaa"/>
+    <contextParameter xmi:id="_M1aw4ttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" type="id_String" value="context_values"/>
+    <contextParameter xmi:id="_M1aw49tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" type="id_String" value="tLogcatcher"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1aw5NtjEfCab76HryCQgQ" confirmationNeeded="false" name="TALEND_X3V12Release_PREPROD">
+    <contextParameter xmi:id="_M1aw5dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" type="id_String" value="usr_Talend"/>
+    <contextParameter xmi:id="_M1aw5ttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1aw59tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter xmi:id="_M1aw6NtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" type="id_String" value="TALEND_X3V12Release_PREPROD"/>
+    <contextParameter xmi:id="_M1aw6dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_M1aw6ttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:GDuN8WSV60TqoAZxw/pBVmgTgdLnkLsZaIDljScsOSkNcNOi5Di5QtY="/>
+    <contextParameter xmi:id="_M1aw69tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" type="id_String" value="mataiva"/>
+    <contextParameter xmi:id="_M1aw7NtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" type="id_String" value="context_values"/>
+    <contextParameter xmi:id="_M1aw7dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" type="id_String" value="tLogcatcher"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1aw7ttjEfCab76HryCQgQ" confirmationNeeded="false" name="TALEND_X3_PREPROD_PIM_PROD">
+    <contextParameter xmi:id="_M1aw79tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" type="id_String" value="usr_Talend"/>
+    <contextParameter xmi:id="_M1aw8NtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1aw8dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter xmi:id="_M1aw8ttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" type="id_String" value="TALEND_X3_PREPROD_PIM_PROD"/>
+    <contextParameter xmi:id="_M1aw89tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_M1aw9NtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:g2uI5zl+LIBHQsZc2OOQGixa3huOwpB8FwIGdq9ilQ8Scg+gr6fbOiQ="/>
+    <contextParameter xmi:id="_M1aw9dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" type="id_String" value="mataiva"/>
+    <contextParameter xmi:id="_M1aw9ttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" type="id_String" value="context_values"/>
+    <contextParameter xmi:id="_M1aw99tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" type="id_String" value="tLogcatcher"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1aw-NtjEfCab76HryCQgQ" confirmationNeeded="false" name="TALEND_X3_V12_PROD_COMARCH_PREPROD">
+    <contextParameter xmi:id="_M1aw-dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" type="id_String" value="usr_Talend"/>
+    <contextParameter xmi:id="_M1aw-ttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1aw-9tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter xmi:id="_M1aw_NtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" type="id_String" value="TALEND_X3_V12_PROD_COMARCH_PREPROD"/>
+    <contextParameter xmi:id="_M1aw_dtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_M1aw_ttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:1xYxOTn8usJyGqH7pJNDJUv2AND+i/xurT1Cm9Q+PB8F2VkfpmJgvOY="/>
+    <contextParameter xmi:id="_M1aw_9tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" type="id_String" value="mataiva"/>
+    <contextParameter xmi:id="_M1axANtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" type="id_String" value="context_values"/>
+    <contextParameter xmi:id="_M1axAdtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" type="id_String" value="tLogcatcher"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1axAttjEfCab76HryCQgQ" confirmationNeeded="false" name="TEST">
+    <contextParameter xmi:id="_M1axA9tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" type="id_String" value="usr_Talend"/>
+    <contextParameter xmi:id="_M1axBNtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1axBdtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" type="id_String" value="dbo"/>
+    <contextParameter xmi:id="_M1axBttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" type="id_String" value="TEST_TALEND"/>
+    <contextParameter xmi:id="_M1axB9tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_M1axCNtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:7WLl7+nmnjXON3EgGLP/tpTHoeoqggk0oMNRxQTKOib9wFsA3Vyi5Os="/>
+    <contextParameter xmi:id="_M1axCdtjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter xmi:id="_M1axCttjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" type="id_String" value="context_values"/>
+    <contextParameter xmi:id="_M1axC9tjEfCab76HryCQgQ" comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" type="id_String" value="tLogcatcher"/>
+  </talendfile:ContextType>
+</xmi:XMI>

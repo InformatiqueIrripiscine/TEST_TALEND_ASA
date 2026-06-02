@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_OyfTYMFGEeyQ3JHbwxqAeQ" confirmationNeeded="false" name="PREPROD">
+    <contextParameter xmi:id="_OyfTYcFGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Host" prompt="Brevo_Host?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_OyfTYsFGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Port" prompt="Brevo_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_OyfTY8FGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Username" prompt="Brevo_Username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_OyfTZMFGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Password" prompt="Brevo_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fzO6kD2oEe24Aek4TXdq-Q" comment="" name="Brevo_Mail_Address" prompt="Brevo_Mail_Address?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fzO6kT2oEe24Aek4TXdq-Q" comment="" name="Brevo_Mail_Sender_Name" prompt="Brevo_Mail_Sender_Name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fzO6kj2oEe24Aek4TXdq-Q" comment="" name="Brevo_Mail_Subject" prompt="Brevo_Mail_Subject?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Tw5E4D26Ee24Aek4TXdq-Q" comment="" name="Brevo_Repertoire_Archive_Erreur" prompt="Brevo_Repertoire_Archive_Erreur?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Tw5E4T26Ee24Aek4TXdq-Q" comment="" name="Brevo_Repertoire_Archive_Sans_Erreur" prompt="Brevo_Repertoire_Archive_Sans_Erreur?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_u-ImoP4HEe2EV_C8JwKz3g" comment="" name="Brevo_Mail_Bcc" prompt="Brevo_Mail_Bcc?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_zH9O4AVgEfCDYpBGVcT_Iw" comment="" name="Brevo_Mail_Address_Compta" prompt="Brevo_Mail_Address_Compta?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_OyfTZcFGEeyQ3JHbwxqAeQ" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_OyfTZsFGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Host" prompt="Brevo_Host?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_OyfTZ8FGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Port" prompt="Brevo_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_OyfTaMFGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Username" prompt="Brevo_Username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_OyfTacFGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Password" prompt="Brevo_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fzO6kz2oEe24Aek4TXdq-Q" comment="" name="Brevo_Mail_Address" prompt="Brevo_Mail_Address?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fzO6lD2oEe24Aek4TXdq-Q" comment="" name="Brevo_Mail_Sender_Name" prompt="Brevo_Mail_Sender_Name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fzO6lT2oEe24Aek4TXdq-Q" comment="" name="Brevo_Mail_Subject" prompt="Brevo_Mail_Subject?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Tw5E4j26Ee24Aek4TXdq-Q" comment="" name="Brevo_Repertoire_Archive_Erreur" prompt="Brevo_Repertoire_Archive_Erreur?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Tw5E4z26Ee24Aek4TXdq-Q" comment="" name="Brevo_Repertoire_Archive_Sans_Erreur" prompt="Brevo_Repertoire_Archive_Sans_Erreur?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_u-Imof4HEe2EV_C8JwKz3g" comment="" name="Brevo_Mail_Bcc" prompt="Brevo_Mail_Bcc?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_zH9O4QVgEfCDYpBGVcT_Iw" comment="" name="Brevo_Mail_Address_Compta" prompt="Brevo_Mail_Address_Compta?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_OyfTasFGEeyQ3JHbwxqAeQ" confirmationNeeded="false" name="TEST">
+    <contextParameter xmi:id="_OyfTa8FGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Host" prompt="Brevo_Host?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_OyfTbMFGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Port" prompt="Brevo_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_OyfTbcFGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Username" prompt="Brevo_Username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_OyfTbsFGEeyQ3JHbwxqAeQ" comment="" name="Brevo_Password" prompt="Brevo_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fzO6lj2oEe24Aek4TXdq-Q" comment="" name="Brevo_Mail_Address" prompt="Brevo_Mail_Address?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fzO6lz2oEe24Aek4TXdq-Q" comment="" name="Brevo_Mail_Sender_Name" prompt="Brevo_Mail_Sender_Name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_fzO6mD2oEe24Aek4TXdq-Q" comment="" name="Brevo_Mail_Subject" prompt="Brevo_Mail_Subject?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Tw5E5D26Ee24Aek4TXdq-Q" comment="" name="Brevo_Repertoire_Archive_Erreur" prompt="Brevo_Repertoire_Archive_Erreur?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Tw5E5T26Ee24Aek4TXdq-Q" comment="" name="Brevo_Repertoire_Archive_Sans_Erreur" prompt="Brevo_Repertoire_Archive_Sans_Erreur?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_u-Imov4HEe2EV_C8JwKz3g" comment="" name="Brevo_Mail_Bcc" prompt="Brevo_Mail_Bcc?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_zH9O4gVgEfCDYpBGVcT_Iw" comment="" name="Brevo_Mail_Address_Compta" prompt="Brevo_Mail_Address_Compta?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

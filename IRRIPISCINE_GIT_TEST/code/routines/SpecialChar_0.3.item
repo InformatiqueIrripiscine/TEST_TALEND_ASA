@@ -1,0 +1,93 @@
+package routines;
+import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Map;
+
+public class SpecialChar {
+	public static String ReplaceSpecialChar(String inputString) {
+		// Liste caractères unicode par position
+        String[] inputList = {
+        		"&#x00C0;" ,"&#x00C1;" ,"&#x00C2;" ,"&#x00C4;" ,"&#x00C6;" ,
+        		"&#x00C9;" ,"&#x00C8;" ,"&#x00CA;" ,"&#x00CB;" ,"&#x00CE;" ,
+        		"&#x00CF;" ,"&#x00CC;" ,"&#x00CD;" ,"&#x00D4;" ,"&#x00D6;" ,
+        		"&#x00DB;" ,"&#x00D9;" ,"&#x00DC;" ,"&#x00E0;" ,"&#x00E2;" ,
+        		"&#x00E4;" ,"&#x00E6;" ,"&#x00E9;" ,"&#x00E8;" ,"&#x00EA;" ,
+        		"&#x00EB;" ,"&#x00EE;" ,"&#x00EF;" ,"&#x00EC;" ,"&#x00ED;" ,
+        		"&#x00F4;" ,"&#x00F6;" ,"&#x00FB;" ,"&#x00F9;" ,"&#x00FC;" ,
+        		"&#x00C7;" ,"&#x00E7;" ,"&#x00D8;" ,"&#x00B3;" ,"&#x00D8;" 
+
+        };
+        // Liste lettres Alphabet par position
+        String[] replacementList = {
+        		"À" ,"Á" ,"Â" ,"Ä" ,"Æ" ,
+        		"É" ,"È" ,"Ê" ,"Ë" ,"Î" ,
+        		"Ï" ,"Ì" ,"Í" ,"Ô" ,"Ö" ,
+        		"Û" ,"Ù" ,"Ü" ,"à" ,"â" ,
+        		"ä" ,"æ" ,"é" ,"è" ,"ê" ,
+        		"ë" ,"î" ,"ï" ,"ì" ,"í" ,
+        		"ô" ,"ö" ,"û" ,"ù" ,"ü" ,
+        		"Ç" ,"ç" ,""  ,"³" ,"Ø"
+        };
+        Map<String, String> replacementMap = createReplacementMap(inputList, replacementList);
+        String input = Relational.ISNULL(inputString)? "": inputString;
+        
+        String replacedString = replaceCharacters(input, replacementMap);
+        
+        //System.out.println("Replaced String: "+input+ "by " + replacedString);
+        return replacedString;
+    }
+    
+    private static Map<String, String> createReplacementMap(String[] inputList, String[] replacementList) {
+        Map<String, String> replacementMap = new HashMap<>();
+        
+        for (int i = 0; i < inputList.length; i++) {
+            replacementMap.put(inputList[i], replacementList[i]);
+        }
+        
+        return replacementMap;
+    }
+    
+    private static String replaceCharacters(String inputString, Map<String, String> replacementMap) {
+        for (String key : replacementMap.keySet()) {
+            if (inputString.contains(key)) {
+                inputString = inputString.replace(key, replacementMap.get(key));
+            }
+        }
+        
+        return inputString;
+    }
+    
+    /**
+     * Remplace les entités Unicode XML (ex: &#x00C0;) par leurs caractères UTF-8 correspondants.
+     * @param InputString La chaîne d'entrée à traiter.
+     * @return La chaîne convertie avec les caractères UTF-8 à la place des entités Unicode XML.
+     */
+    public static String replaceUnicodeEntities(String InputString) {
+        // Vérifier si la chaîne en entrée est nulle ou vide
+        if (InputString == null || InputString.isEmpty()) {
+            return InputString; // 
+        }
+        
+    	// Pattern pour matcher les entités Unicode XML
+        Pattern pattern = Pattern.compile("&#x([0-9A-Fa-f]+);");
+        Matcher matcher = pattern.matcher(InputString);
+
+        // Utiliser un StringBuffer pour construire le résultat final
+        StringBuffer result = new StringBuffer();
+        while (matcher.find()) {
+            // Convertir le code hexadécimal en un entier (code Unicode)
+            int codePoint = Integer.parseInt(matcher.group(1), 16);
+            // Remplacer l'entité Unicode par son caractère UTF-8 correspondant
+            matcher.appendReplacement(result, new String(Character.toChars(codePoint)));
+        }
+        // Ajouter le reste de la chaîne
+        matcher.appendTail(result);
+
+        // Retourner la chaîne modifiée
+        return result.toString();
+    }
+
+}
+
+

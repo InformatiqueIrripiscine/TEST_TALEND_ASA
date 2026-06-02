@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_S1B-AOhTEe6JiMN2KPkKOw" name="FreshSales_Contacts" id="_Szr6MOhTEe6JiMN2KPkKOw" dataPackage="_S1B-COhTEe6JiMN2KPkKOw" JSONFilePath="C:/Users/asaid.ext.IRRI/Desktop/new 2.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_S1B-AehTEe6JiMN2KPkKOw" LimitBoucle="50" AbsoluteXPathQuery="$.contacts[*]">
+      <schemaTargets xmi:id="_S1B-AuhTEe6JiMN2KPkKOw" RelativeXPathQuery="id" TagName="id"/>
+      <schemaTargets xmi:id="_S1B-A-hTEe6JiMN2KPkKOw" RelativeXPathQuery="first_name" TagName="first_name"/>
+      <schemaTargets xmi:id="_S1B-BOhTEe6JiMN2KPkKOw" RelativeXPathQuery="last_name" TagName="last_name"/>
+      <schemaTargets xmi:id="_S1B-BehTEe6JiMN2KPkKOw" RelativeXPathQuery="email" TagName="email"/>
+      <schemaTargets xmi:id="_S1B-BuhTEe6JiMN2KPkKOw" RelativeXPathQuery="created_at" TagName="created_at"/>
+      <schemaTargets xmi:id="_S1B-B-hTEe6JiMN2KPkKOw" RelativeXPathQuery="updated_at" TagName="updated_at"/>
+      <schemaTargets xmi:id="_Je_6QBD5Ee-vxoUelWPkKw" RelativeXPathQuery="city" TagName="city"/>
+      <schemaTargets xmi:id="_KtOA4BD5Ee-vxoUelWPkKw" RelativeXPathQuery="zipcode" TagName="zipcode"/>
+      <schemaTargets xmi:id="_Op__gBD5Ee-vxoUelWPkKw" RelativeXPathQuery="mobile_number" TagName="mobile_number"/>
+      <schemaTargets xmi:id="_O45-MBD5Ee-vxoUelWPkKw" RelativeXPathQuery="address" TagName="address"/>
+      <schemaTargets xmi:id="_2YLpUBOIEe-Ivfi4PNC2-A" RelativeXPathQuery="custom_field.cf_id_rcu" TagName="cf_id_rcu"/>
+      <schemaTargets xmi:id="_2YLpUROIEe-Ivfi4PNC2-A" RelativeXPathQuery="custom_field.cf_id_comarch" TagName="cf_id_comarch"/>
+      <schemaTargets xmi:id="_3OipkBOIEe-Ivfi4PNC2-A" RelativeXPathQuery="custom_field.cf_lien_vers_zefid" TagName="cf_lien_vers_zefid"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_S1B-COhTEe6JiMN2KPkKOw" name="default" dataManager="_S1B-AOhTEe6JiMN2KPkKOw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_S1B-CehTEe6JiMN2KPkKOw" id="_GnMvMOhTEe6JiMN2KPkKOw" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_S1B-CuhTEe6JiMN2KPkKOw" label="id" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_S1B-C-hTEe6JiMN2KPkKOw" label="first_name" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_S1B-DOhTEe6JiMN2KPkKOw" label="last_name" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_S1B-DehTEe6JiMN2KPkKOw" label="email" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_S1B-DuhTEe6JiMN2KPkKOw" label="created_at" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_S1B-D-hTEe6JiMN2KPkKOw" label="updated_at" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TWGiQBD5Ee-vxoUelWPkKw" label="city" length="32" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TWGiQRD5Ee-vxoUelWPkKw" label="zipcode" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TWGiQhD5Ee-vxoUelWPkKw" label="mobile_number" length="12" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TWGiQxD5Ee-vxoUelWPkKw" label="address" length="65" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4A7v0BOIEe-Ivfi4PNC2-A" label="cf_id_rcu" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4A7v0ROIEe-Ivfi4PNC2-A" label="cf_id_comarch" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4A7v0hOIEe-Ivfi4PNC2-A" label="cf_lien_vers_zefid" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

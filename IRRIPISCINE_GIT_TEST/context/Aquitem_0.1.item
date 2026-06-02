@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_fuBZcErxEe6PttLEN8UbZg" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_fuBZcUrxEe6PttLEN8UbZg" comment="" name="Aquitem_FTP_Server" prompt="Aquitem_FTP_Server?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_fuBZckrxEe6PttLEN8UbZg" comment="" name="Aquitem_FTP_User" prompt="Aquitem_FTP_User?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_fuBZc0rxEe6PttLEN8UbZg" comment="" name="Aquitem_FTP_Password" prompt="Aquitem_FTP_Password?" promptNeeded="false" type="id_Password" value=""/>
+  <contextParameter xmi:id="_fuBZdErxEe6PttLEN8UbZg" comment="" name="Aquitem_FTP_Article_Folder" prompt="Aquitem_FTP_Article_Folder?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nhVLwOXTEe6JiMN2KPkKOw" comment="" name="Aquitem_API_URL" prompt="Aquitem_API_URL?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_fMAJMOtdEe6JiMN2KPkKOw" comment="" name="Aquitem_API_mdp" prompt="Aquitem_API_mdp?" promptNeeded="false" type="id_String" value=""/>
+</talendfile:ContextType>

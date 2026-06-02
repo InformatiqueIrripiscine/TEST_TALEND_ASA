@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_FBzOwOXOEe6JiMN2KPkKOw" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_FBzOweXOEe6JiMN2KPkKOw" comment="" name="FreshSales_URL" prompt="FreshSales_URL?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_FBzOwuXOEe6JiMN2KPkKOw" comment="" name="FreshSales_API_Token" prompt="FreshSales_API_Token?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_ZwRkwOXVEe6JiMN2KPkKOw" comment="" name="LAST_EXEC_FRESHWORK_AQUITEM" prompt="LAST_EXEC_FRESHWORK_AQUITEM?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_lMkEYCGKEe-M-fphKvevdw" comment="" name="FreshSales_API_CONTACTS_URL" prompt="FreshSales_API_CONTACTS_URL?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_SMA4cJLdEfCrpugjokhKyA" comment="" name="FreshSales_Owner_Id_Service_Client" prompt="FreshSales_Owner_Id_Service_Client?" promptNeeded="false" type="id_String" value=""/>
+</talendfile:ContextType>

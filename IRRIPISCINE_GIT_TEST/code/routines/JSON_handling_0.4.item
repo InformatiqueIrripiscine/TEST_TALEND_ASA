@@ -1,0 +1,431 @@
+package routines;
+
+import java.io.IOException;
+import routines.system.JSONException;
+import routines.system.JSONObject;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class JSON_handling {
+	
+	/**
+	  * JsonFormatter:   return a Json in good layout 
+	  * 
+	  * 
+	  * {talendTypes} String
+	  * 
+	  * {Category} JSON_Handling
+	  * 
+	  * {param} string (myString)		  input: Field name
+	  * {param} string (numIndent) 	      input: indentation number
+	  * 
+	  * {example} JsonFormatter(myString, numIndent)
+	  * 
+	  */  
+	  
+	  public static String JsonFormatter (String myString, int numIndent) throws JSONException {
+		  
+		  String result = "";
+		  
+		  if(myString != null && !myString.trim().equals(""))
+		  {
+			  JSONObject jsonObject = new JSONObject(myString);
+			  result = jsonObject.toString(numIndent);
+		  }
+
+		  return result;
+	  }
+	  
+	 	  	
+	  /**
+	     * localizable : Rule for localizable Data.
+	     * 
+	     * 
+	     * {talendTypes} String
+	     * 
+	     * {Category} JSON_Handling
+	     * 
+	     * {param} string(attr) input: The string need to be printed.
+	     * {param} string(list_values) input: The string need to be printed.
+	     * {param} string(values) input: The string need to be printed.
+	     * {param} string(scope) input: The string need to be printed.
+	     * {param} string(type) input: The string need to be printed.
+	     * 
+	     * {example} localizable(attr, list_values, values, scope, type).
+	     */
+  
+	  	private static String localizable(String attr, String list_values, String scope, String type) {
+	  		
+	  		String local_values = "";
+	  		String de_DE = "";
+	  		String fr_FR = "";
+	  		
+	  		if (list_values.contains(attr+"_de_DE") || list_values.contains(attr+"_fr_FR"))
+	  		{
+		  		if (type != null && !type.equals("") && type.equals("number"))
+				{
+		  			//de_DE = (list_values.split(attr+"_de_DE")[1].split(" : ")[1].split(", ")[0]).replace("\"","");
+					fr_FR = list_values.split(attr+"_fr_FR")[1].split(" : ")[1].split(", ")[0].replace("\"","");
+					//System.out.println("de_DE : " + de_DE);
+					//System.out.println("fr_FR : " + fr_FR);
+					
+				}
+		  		else if (list_values.contains(attr+"_de_DE_EUR") || list_values.contains(attr+"_fr_FR_EUR"))
+				{
+		  			//de_DE = list_values.split(attr+"_de_DE_EUR")[1].split(" : ")[1].split(", ")[0];
+					fr_FR = list_values.split(attr+"_fr_FR_EUR")[1].split(" : ")[1].split(", ")[0];
+					//System.out.println("de_DE : " + de_DE);
+					//System.out.println("fr_FR : " + fr_FR);
+				}
+				else
+				{
+					//de_DE = list_values.split(attr+"_de_DE")[1].split(" : ")[1].split(", ")[0];
+					fr_FR = list_values.split(attr+"_fr_FR")[1].split(" : ")[1].split(", ")[0];
+					//System.out.println("de_DE : " + de_DE);
+					//System.out.println("fr_FR : " + fr_FR);
+				}
+	  		}
+	  		else
+	  		{
+	  			if (type != null && !type.equals("") && type.equals("number"))
+				{
+		  			de_DE = "";
+					fr_FR = list_values.split(attr)[1].split(" : ")[1].split(", ")[0].replace("\"","");
+					//System.out.println("de_DE : " + de_DE);
+					//System.out.println("fr_FR : " + fr_FR);
+				}
+				else
+				{
+					de_DE = "";
+					fr_FR = list_values.split(attr)[1].split(" : ")[1].split(", ")[0];
+					//System.out.println("de_DE : " + de_DE);
+					//System.out.println("fr_FR : " + fr_FR);
+				}
+	  		}
+			
+			if (attr != null && attr.contains("CHP_pv"))
+			{
+				if (de_DE != null && !de_DE.trim().equals("") && !de_DE.trim().equals("\"\"") && fr_FR != null && !fr_FR.trim().equals("") && !fr_FR.trim().equals("\"\""))
+				{
+					local_values = "\"" + attr.replace("CHP_", "") + "\":[{\"locale\":\"de_DE\",\"scope\":"
+								+scope+",\"data\":[{\"amount\":"+de_DE+",\"currency\":\"EUR\"}]},{\"locale\":\"fr_FR\",\"scope\":"
+								+scope+",\"data\":[{\"amount\":"+fr_FR+",\"currency\":\"EUR\"}]}]";
+				}
+				
+				else if ((de_DE == null || de_DE.trim().equals("") || de_DE.trim().equals("\"\"")) && fr_FR != null && !fr_FR.trim().equals("") && !fr_FR.trim().equals("\"\""))
+				{
+					local_values = "\"" + attr.replace("CHP_", "") + "\":[{\"locale\":\"fr_FR\",\"scope\":"
+							+scope+",\"data\":[{\"amount\":"+fr_FR+",\"currency\":\"EUR\"}]}]";
+				}
+				
+				else if (de_DE != null && !de_DE.trim().equals("") && !de_DE.trim().equals("\"\"") &&  (fr_FR == null || fr_FR.trim().equals("") || fr_FR.trim().equals("\"\"")))
+				{
+					local_values = "\"" + attr.replace("CHP_", "") + "\":[{\"locale\":\"de_DE\",\"scope\":"
+							+scope+",\"data\":[{\"amount\":"+de_DE+",\"currency\":\"EUR\"}]}]";
+				}
+			}
+			
+			else if(attr != null && "multiselect".equals(type))
+			{
+				if (de_DE != null && !de_DE.trim().equals("") && !de_DE.trim().equals("\"\"") && fr_FR != null && !fr_FR.trim().equals("") && !fr_FR.trim().equals("\"\""))
+				{
+					local_values = "\"" + attr.replace("CHP_", "") + "\":[{\"locale\":\"de_DE\",\"scope\":"
+						+scope+",\"data\":["+de_DE.replace(",", "\",\"")+"]},{\"locale\":\"fr_FR\",\"scope\":"
+						+scope+",\"data\":["+fr_FR.replace(",", "\",\"")+"]}]";
+				}
+				
+				else if ((de_DE == null || de_DE.trim().equals("") || de_DE.trim().equals("\"\"")) && fr_FR != null && !fr_FR.trim().equals("") && !fr_FR.trim().equals("\"\""))
+				{
+					local_values = "\"" + attr.replace("CHP_", "") + "\":[{\"locale\":\"fr_FR\",\"scope\":"
+						+scope+",\"data\":["+fr_FR.replace(",", "\",\"")+"]}]";
+				}
+				
+				else if (de_DE != null && !de_DE.trim().equals("") && !de_DE.trim().equals("\"\"") &&  (fr_FR == null || fr_FR.trim().equals("") || fr_FR.trim().equals("\"\"")))
+				{
+					local_values = "\"" + attr.replace("CHP_", "") + "\":[{\"locale\":\"de_DE\",\"scope\":"
+						+scope+",\"data\":["+de_DE.replace(",", "\",\"")+"]}]";
+				}
+			}
+			
+			else
+			{
+				if (de_DE != null && !de_DE.trim().equals("") && !de_DE.trim().equals("\"\"") && fr_FR != null && !fr_FR.trim().equals("") && !fr_FR.trim().equals("\"\""))
+				{
+					local_values = "\"" + attr.replace("CHP_", "") + "\":[{\"locale\":\"de_DE\",\"scope\":"
+						+scope+",\"data\":"+de_DE+"},{\"locale\":\"fr_FR\",\"scope\":"
+						+scope+",\"data\":"+fr_FR+"}]";
+				}
+				
+				else if ((de_DE == null || de_DE.trim().equals("") || de_DE.trim().equals("\"\"")) && fr_FR != null && !fr_FR.trim().equals("") && !fr_FR.trim().equals("\"\""))
+				{
+					local_values = "\"" + attr.replace("CHP_", "") + "\":[{\"locale\":\"fr_FR\",\"scope\":"
+						+scope+",\"data\":"+fr_FR+"}]";
+				}
+				
+				else if (de_DE != null && !de_DE.trim().equals("") && !de_DE.trim().equals("\"\"") &&  (fr_FR == null || fr_FR.trim().equals("") || fr_FR.trim().equals("\"\"")))
+				{
+					local_values = "\"" + attr.replace("CHP_", "") + "\":[{\"locale\":\"de_DE\",\"scope\":"
+						+scope+",\"data\":"+de_DE+"}]";
+				}
+			}
+			//System.out.println("local_values : " + local_values);
+			
+	        return local_values;
+	  }
+	  
+	  /**
+     * jsonCategories : Create JSON to POST a new Categorie.
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} JSON_Handling
+     * 
+     * {param} string(code) input: The string need to be printed.
+     * {param} string(labels_FR) input: The string need to be printed.
+     * {param} string(labels_DE) input: The string need to be printed.
+     * 
+     * {example} jsonCategories(code, labels_FR, labels_DE).
+     */
+  	
+  	public static String jsonCategories(String code, String parent, 
+  										String labels_FR) throws JSONException, IOException {
+  		
+  		String result = "";
+
+		String json = "{\"code\":\""+code+"\",\"parent\":\""+parent+"\",\"labels\":"
+					+ "{\"fr_FR\":\""+labels_FR+"\"}}";
+      
+		result = json;
+        
+        return result;
+  }
+  	
+  	/**
+     * jsonProduct : Create JSON to POST or PATCH Product.
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} JSON_Handling
+     * 
+     * {param} string(identifier) input: The string need to be printed.
+     * {param} Boolean(enabled) input: The Boolean need to be printed.
+     * {param} string(family) input: The string need to be printed.
+     * {param} string(categories_id) input: The string need to be printed.
+     * {param} string(categories_lib) input: The string need to be printed.
+     * {param} string(parent) input: The string need to be printed.
+     * {param} string(list_attr) input: The string need to be printed.
+     * {param} string(list_values) input: The string need to be printed.
+     * 
+     * {example} jsonProduct(identifier, enabled, family, categories_id, categories_lib, parent, list_attr, list_values).
+     */
+  	
+  	public static String jsonProduct(String identifier,  String enabled, String family, String categories_id,
+  									 String categories_lib, String parent, String list_attr,
+  									 String list_values) throws JSONException, IOException {
+  		//System.out.println("identifier : " + identifier);
+  		String result = "";
+  		String json_str = "";
+  		String values = "";
+  		String attr = "";
+  		String value = "";
+  		String locale = "null";
+  		String scope = "null";
+  		
+  		list_attr = list_attr + ", "; 
+  		
+  		int nb_attr = StringHandling.COUNT(list_attr, ",");
+  		//System.out.println("nb_attr : " + nb_attr);
+  		//System.out.println("list_attr : " + list_attr);
+  		//System.out.println("list_values : " + list_values);
+  		
+  		for (int i=0; i<nb_attr; i++) {
+  			
+  			attr = list_attr.split(", ")[i].split(" : ")[0];
+  			//System.out.println("attr : " + attr);
+  			String localisable =  list_attr.split("Localisable = ")[i+1].split(" | ")[0];
+  			//System.out.println("localisable : " + localisable);
+  			String scopable =  list_attr.split("Scopable = ")[i+1].split(" | ")[0];
+  			//System.out.println("scopable : " + scopable);
+  			String type = list_attr.split("Type = ")[i+1].split(", ")[0];
+  			//System.out.println("type : " + type);
+  					
+  			if (list_values.contains(attr)) {
+  				if (scopable.trim().equals("Oui"))
+  				{
+  					scope = "\"ecommerce\"";
+  				}
+  				else if (scopable.trim().equals("Non"))
+  				{
+  					scope = "null";
+  				}
+  				
+  				if (localisable.trim().equals("Oui"))
+  				{
+  					values = values + "," + localizable(attr, list_values, scope, type);
+  				}
+
+  				else 
+  				{
+  					if (type != null && "number".equals(type))
+  					{
+  						//System.out.println("***Split Attr : " + list_values.split(attr)[1]);
+  						value = (list_values.split(attr)[1].split(" : ")[1].split(", ")[0]).replace("\"","");
+  						//System.out.println("value : " + value);
+  					}
+  					else if (type != null && "boolean".equals(type))
+  					{
+  						//System.out.println("***Split Attr : " + list_values.split(attr)[1]);
+  						String bool_value = (list_values.split(attr)[1].split(" : ")[1].split(", ")[0]).replace("\"","");
+  						value = bool_value.equals("0") ? "false" : "true";
+  						//System.out.println("value : " + value);
+  					}
+  					else
+  					{
+  						//System.out.println("***Split Attr : " + list_values.split(attr)[1]);
+  						value = list_values.split(attr)[1].split(" : ")[1].split(", ")[0];
+  						//System.out.println("value : " + value);
+  					}
+  					
+  					//if (value != null && !value.trim().equals("") && !value.trim().equals("\"\"")) {
+  						
+  						if(attr != null && "multiselect".equals(type))
+  						{
+  							values = value != null && !value.trim().equals("") && !value.trim().equals("\"\"") ? values + ",\"" + attr.replace("CHP_", "") + "\":[{\"locale\":"+locale+",\"scope\":"
+  									+scope+",\"data\":["+value.replace(",", "\",\"")+"]}]" : values + ",\"" + attr.replace("CHP_", "") + "\":[{\"locale\":"+locale+",\"scope\":"
+  		  									+scope+",\"data\":[]}]";
+  						}
+  						
+  						else {if("metric".equals(type))
+  						{
+  							String value_metric[] = value.split("-");
+  							String value1 = value_metric[0].replaceAll("\"", "");
+  							value1 = value1.replaceAll("null", "0");
+  							String value2 = value_metric[1].replaceAll("\"", "");
+  							if ("\"0\"".equals(value1)==false)
+  							{
+  								//System.out.println("Errrrrrr : " + attr + " ,$"+value + "$, Value1 " + value1 + ", Value2 " + value2);
+  							/*values = values + ",\"" + attr.replace("CHP_", "") + "\":[{\"locale\":"+locale+",\"scope\":"
+  		  									+scope+",\"data\":{"
+  		  											+ "\"amount\":"
+  									+value+",\"unit\":"+value+"}}]";*/
+  							values = values + ",\"" + attr.replace("CHP_", "") + "\":[{\"locale\":"+locale+",\"scope\":"
+	  									+scope+",\"data\":{"
+	  											+ "\"amount\":\"" + value1+"\",\"unit\":\"" + value2 + "\"}}]";
+  							}
+  						}
+  						
+  						else 
+  						{
+  							values = values + ",\"" + attr.replace("CHP_", "") + "\":[{\"locale\":"+locale+",\"scope\":"
+  	  		  						+scope+",\"data\":"+value+"}]";
+  						}
+  						}
+  					//}
+  				}
+  			}
+  		}
+  		String new_cat_lib = "";
+  		if (categories_lib != null && !categories_lib.trim().equals(""))
+  		{
+  			if (categories_lib.contains(",") == true)
+  			{
+	  			int nb_cat = StringHandling.COUNT(categories_lib, ",");
+	  			for (int i = 0; i <= nb_cat; i++)
+	  			{
+	  				new_cat_lib = new_cat_lib + ",\""+(categories_lib.replace(",","£")).split("£")[i]+"\"";
+	  			}
+  			}
+  			else 
+  			{
+  				new_cat_lib = ",\""+categories_lib+"\"";
+  			}
+  		}
+  		String cat = "";
+  		if (categories_id != null && !categories_id.trim().equals(""))
+  		{
+  			cat = "\"categories\": ["
+  					+"\""+categories_id+"\""
+  					+new_cat_lib
+  					+"],";
+  		}
+  		String fam = "";
+  		if (family != null && !family.trim().equals(""))
+  		{
+  			fam = "\"family\": \""+family+"\",";
+  		}
+  		json_str = "{"
+	  		    +"\"identifier\": \""+identifier+"\","
+	  		    +" \"enabled\": "+enabled+","
+	  		    //+"\"enabled\": \""+enabled+"\","
+		  		+fam
+		  		+cat
+		  		+"\"groups\": [],"
+		  		//+"\"parent\": \""+parent+"\","
+		  		+"\"values\": {"+values+"}}";
+  		
+  		result = json_str.replace("\"values\": {,", "\"values\": {");
+  		result = result.replace(",,,", ",");
+  		result = result.replace(",,", ",");
+  		//', ', '@$@'), ' : ', '¤$¤')
+  		result = result.replaceAll("@$@", ", ");
+  		result = result.replaceAll("¤$¤", " : ");
+  		//System.out.println("JsonProduct : " + result);
+  		
+  		//System.out.println("list_attr : " + list_attr);
+  		//System.out.println("list_values : " + list_values);
+  		//System.out.println("values : " + values);
+  		result = JsonFormatter(result, 4);
+  		
+        return result;
+  }
+  
+ 	 /**
+    * jsonOptionsAttributs : Create JSON to POST a new Options of Attributes.
+    * 
+    * 
+    * {talendTypes} String
+    * 
+    * {Category} JSON_Handling
+    * 
+    * {param} string(code) input: The string need to be printed.
+    * {param} string(attribute) input: The string need to be printed.
+    * {param} string(sort_order) input: The string need to be printed.
+    * {param} string(de_DE) input: The string need to be printed.
+    * {param} string(fr_FR) input: The string need to be printed.
+    * 
+    * {example} jsonOptionsAttributs(code, attribute, sort_order, de_DE, fr_FR).
+    */
+
+ 	public static String jsonOptionsAttributs(String code, String attribute, String sort_order,
+ 									 String de_DE, String fr_FR) throws JSONException, IOException {
+ 		
+ 		String result = "";
+ 		
+ 		String json_str = "{\"code\": \""+code+"\",\"attribute\": \""+attribute+"\",\"sort_order\": "
+ 						  +sort_order+",\"labels\": {\"de_DE\": \""+de_DE+"\",\"fr_FR\": \""+fr_FR+"\"}}";
+
+ 		//System.out.print(json_str);
+ 		
+ 		result = JsonFormatter(json_str, 4);
+       
+        return result;
+ 	}
+}

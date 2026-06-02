@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_M1H14NtjEfCab76HryCQgQ" confirmationNeeded="false" name="PREPROD">
+    <contextParameter xmi:id="_M1H14dtjEfCab76HryCQgQ" comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H14ttjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H149tjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H15NtjEfCab76HryCQgQ" comment="" name="server" prompt="server?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H15dtjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H15ttjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H159tjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H16NtjEfCab76HryCQgQ" comment="" name="Sync_Files_Arch" prompt="Sync_Files_Arch?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_c4VIsB0rEfG7jPNKfFkuUQ" comment="" name="Sage_X3_Dir_ETL" prompt="Sage_X3_Dir_ETL?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1H16dtjEfCab76HryCQgQ" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_M1H16ttjEfCab76HryCQgQ" comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H169tjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H17NtjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H17dtjEfCab76HryCQgQ" comment="" name="server" prompt="server?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H17ttjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H179tjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H18NtjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H18dtjEfCab76HryCQgQ" comment="" name="Sync_Files_Arch" prompt="Sync_Files_Arch?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_c4VIsR0rEfG7jPNKfFkuUQ" comment="" name="Sage_X3_Dir_ETL" prompt="Sage_X3_Dir_ETL?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M1H18ttjEfCab76HryCQgQ" confirmationNeeded="false" name="TEST">
+    <contextParameter xmi:id="_M1H189tjEfCab76HryCQgQ" comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H19NtjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H19dtjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H19ttjEfCab76HryCQgQ" comment="" name="server" prompt="server?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H199tjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H1-NtjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H1-dtjEfCab76HryCQgQ" comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_M1H1-ttjEfCab76HryCQgQ" comment="" name="Sync_Files_Arch" prompt="Sync_Files_Arch?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_c4VIsh0rEfG7jPNKfFkuUQ" comment="" name="Sage_X3_Dir_ETL" prompt="Sage_X3_Dir_ETL?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

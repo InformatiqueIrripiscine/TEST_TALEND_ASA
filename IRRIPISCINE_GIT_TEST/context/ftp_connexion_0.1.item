@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_rtlaYITlEeyK8bbl1zzCDg" confirmationNeeded="false" name="PREPROD">
+    <contextParameter xmi:id="_rtlaYYTlEeyK8bbl1zzCDg" comment="Hôte connexion au serveur FTP" name="Comarch_FTP_Host" prompt="Comarch_FTP_Host?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_rtlaYoTlEeyK8bbl1zzCDg" comment="Port connexion au serveur FTP" name="Comarch_FTP_Port" prompt="Comarch_FTP_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_rtlaY4TlEeyK8bbl1zzCDg" comment="Utilisateur connexion au serveur FTP" name="Comarch_FTP_Login" prompt="Comarch_FTP_Login?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_rtlaZITlEeyK8bbl1zzCDg" comment="Mot de passe connexion au serveur FTP" name="Comarch_FTP_Password" prompt="Comarch_FTP_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SMoOAIT4EeyK8bbl1zzCDg" comment="Répertoire où se trouvent les fichiers en local" name="Repertoire_Local_SX3_COM" prompt="Repertoire_Local_SX3_COM?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SMoOAYT4EeyK8bbl1zzCDg" comment="Répertoire où doivent se trouver les fichiers sur le serveur FTP" name="Comarch_FTP_Web_Input_LIV" prompt="Comarch_FTP_Web_Input_LIV?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_um1R0Ns8Eeysx8Rsm4ORxg" comment="" name="Repertoire_Local" prompt="Repertoire_Local?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_um1R0ds8Eeysx8Rsm4ORxg" comment="" name="Comarch_FTP_Web_Input_CDE" prompt="Comarch_FTP_Web_Input_CDE?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_yRPDkGviEe2kGL0PDag6xA" comment="" name="FTP_FOLDER_ARCHIV_MAIL_ERROR" prompt="FTP_FOLDER_ARCHIV_MAIL_ERROR?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_3n8CgGviEe2kGL0PDag6xA" comment="" name="FTP_FOLDER_ARCHIV_MAIL" prompt="FTP_FOLDER_ARCHIV_MAIL?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_rtlaZYTlEeyK8bbl1zzCDg" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_rtlaZoTlEeyK8bbl1zzCDg" comment="Hôte connexion au serveur FTP" name="Comarch_FTP_Host" prompt="Comarch_FTP_Host?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_rtlaZ4TlEeyK8bbl1zzCDg" comment="Port connexion au serveur FTP" name="Comarch_FTP_Port" prompt="Comarch_FTP_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_rtlaaITlEeyK8bbl1zzCDg" comment="Utilisateur connexion au serveur FTP" name="Comarch_FTP_Login" prompt="Comarch_FTP_Login?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_rtlaaYTlEeyK8bbl1zzCDg" comment="Mot de passe connexion au serveur FTP" name="Comarch_FTP_Password" prompt="Comarch_FTP_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SMoOAoT4EeyK8bbl1zzCDg" comment="Répertoire où se trouvent les fichiers en local" name="Repertoire_Local_SX3_COM" prompt="Repertoire_Local_SX3_COM?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SMoOA4T4EeyK8bbl1zzCDg" comment="Répertoire où doivent se trouver les fichiers sur le serveur FTP" name="Comarch_FTP_Web_Input_LIV" prompt="Comarch_FTP_Web_Input_LIV?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_um1R0ts8Eeysx8Rsm4ORxg" comment="" name="Repertoire_Local" prompt="Repertoire_Local?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_um1R09s8Eeysx8Rsm4ORxg" comment="" name="Comarch_FTP_Web_Input_CDE" prompt="Comarch_FTP_Web_Input_CDE?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_yRPDkWviEe2kGL0PDag6xA" comment="" name="FTP_FOLDER_ARCHIV_MAIL_ERROR" prompt="FTP_FOLDER_ARCHIV_MAIL_ERROR?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_3n8CgWviEe2kGL0PDag6xA" comment="" name="FTP_FOLDER_ARCHIV_MAIL" prompt="FTP_FOLDER_ARCHIV_MAIL?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_rtlaaoTlEeyK8bbl1zzCDg" confirmationNeeded="false" name="TEST">
+    <contextParameter xmi:id="_rtlaa4TlEeyK8bbl1zzCDg" comment="Hôte connexion au serveur FTP" name="Comarch_FTP_Host" prompt="Comarch_FTP_Host?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_rtlabITlEeyK8bbl1zzCDg" comment="Port connexion au serveur FTP" name="Comarch_FTP_Port" prompt="Comarch_FTP_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_rtlabYTlEeyK8bbl1zzCDg" comment="Utilisateur connexion au serveur FTP" name="Comarch_FTP_Login" prompt="Comarch_FTP_Login?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_rtlaboTlEeyK8bbl1zzCDg" comment="Mot de passe connexion au serveur FTP" name="Comarch_FTP_Password" prompt="Comarch_FTP_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SMoOBIT4EeyK8bbl1zzCDg" comment="Répertoire où se trouvent les fichiers en local" name="Repertoire_Local_SX3_COM" prompt="Repertoire_Local_SX3_COM?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SMoOBYT4EeyK8bbl1zzCDg" comment="Répertoire où doivent se trouver les fichiers sur le serveur FTP" name="Comarch_FTP_Web_Input_LIV" prompt="Comarch_FTP_Web_Input_LIV?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_um1R1Ns8Eeysx8Rsm4ORxg" comment="" name="Repertoire_Local" prompt="Repertoire_Local?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_um1R1ds8Eeysx8Rsm4ORxg" comment="" name="Comarch_FTP_Web_Input_CDE" prompt="Comarch_FTP_Web_Input_CDE?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_yRPDkmviEe2kGL0PDag6xA" comment="" name="FTP_FOLDER_ARCHIV_MAIL_ERROR" prompt="FTP_FOLDER_ARCHIV_MAIL_ERROR?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_3n8CgmviEe2kGL0PDag6xA" comment="" name="FTP_FOLDER_ARCHIV_MAIL" prompt="FTP_FOLDER_ARCHIV_MAIL?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

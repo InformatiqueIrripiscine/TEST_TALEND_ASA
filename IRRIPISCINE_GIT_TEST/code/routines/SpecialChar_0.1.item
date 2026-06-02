@@ -1,0 +1,47 @@
+package routines;
+import java.util.HashMap;
+import java.util.Map;
+
+public class SpecialChar {
+	public static String ReplaceSpecialChar(String inputString) {
+        String[] inputList = {
+            "&#xC0;", "&#xC2;", "&#xC4;", "&#xC9;", "&#xC8;", "&#xCA;", "&#xCB;", "&#xCE;", "&#xCF;", "&#xD4;",
+            "&#xD6;", "&#xDB;", "&#xDC;", "&#xE0;", "&#xE2;", "&#xE4;", "&#xE9;", "&#xE8;", "&#xEA;", "&#xEB;",
+            "&#xEE;", "&#xEF;", "&#xF4;", "&#xF6;", "&#xFB;", "&#xFC;"
+        };
+        
+        String[] replacementList = {
+            "À", "Â", "Ä", "É", "È", "Ê", "Ë", "Î", "Ï", "Ô", "Ö", "Û", "Ü", "à", "â", "ä", "é", "è", "ê",
+            "ë", "î", "ï", "ô", "ö", "û", "ü"
+        };
+        
+        Map<String, String> replacementMap = createReplacementMap(inputList, replacementList);
+        
+        String input = Relational.ISNULL(inputString)? "": inputString;
+        
+        String replacedString = replaceCharacters(input, replacementMap);
+        
+        System.out.println("Replaced String: "+input+ "by " + replacedString);
+        return replacedString;
+    }
+    
+    private static Map<String, String> createReplacementMap(String[] inputList, String[] replacementList) {
+        Map<String, String> replacementMap = new HashMap<>();
+        
+        for (int i = 0; i < inputList.length; i++) {
+            replacementMap.put(inputList[i], replacementList[i]);
+        }
+        
+        return replacementMap;
+    }
+    
+    private static String replaceCharacters(String inputString, Map<String, String> replacementMap) {
+        for (String key : replacementMap.keySet()) {
+            if (inputString.contains(key)) {
+                inputString = inputString.replace(key, replacementMap.get(key));
+            }
+        }
+        
+        return inputString;
+    }
+}

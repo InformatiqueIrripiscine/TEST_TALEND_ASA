@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_M0kcQNtjEfCab76HryCQgQ" confirmationNeeded="false" name="PREPROD">
+    <contextParameter xmi:id="_M0lDUNtjEfCab76HryCQgQ" comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" type="id_String" value="ETL_USR"/>
+    <contextParameter xmi:id="_M0lDUdtjEfCab76HryCQgQ" comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" type="id_String" value="instance=X3V12T"/>
+    <contextParameter xmi:id="_M0lDUttjEfCab76HryCQgQ" comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_M0lDU9tjEfCab76HryCQgQ" comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" type="id_String" value="aratika"/>
+    <contextParameter xmi:id="_M0lDVNtjEfCab76HryCQgQ" comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:SZQu06kl/ki8LhhX5lpwvoXZeCPW/yEE2aLuiXfGLgc7ra7GM8jt"/>
+    <contextParameter xmi:id="_M0lDVdtjEfCab76HryCQgQ" comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" type="id_String" value="PREPROD"/>
+    <contextParameter xmi:id="_M0lDVttjEfCab76HryCQgQ" comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" type="id_String" value="x3v12t"/>
+    <contextParameter xmi:id="_M0lDV9tjEfCab76HryCQgQ" comment="" name="Sage_X3_Collate_Type" prompt="Sage_X3_Collate_Type?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M0lDWNtjEfCab76HryCQgQ" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_M0lDWdtjEfCab76HryCQgQ" comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" type="id_String" value="ETL_USR"/>
+    <contextParameter xmi:id="_M0lDWttjEfCab76HryCQgQ" comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" type="id_String" value="instance=X3V12"/>
+    <contextParameter xmi:id="_M0lDW9tjEfCab76HryCQgQ" comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_M0lDXNtjEfCab76HryCQgQ" comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" type="id_String" value="TENARARO"/>
+    <contextParameter xmi:id="_M0lDXdtjEfCab76HryCQgQ" comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:33ZJYckK4chk8f0gQQxozB8u5ClB0Gtdh2OD2fyKquVRmARMPb1/"/>
+    <contextParameter xmi:id="_M0lDXttjEfCab76HryCQgQ" comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" type="id_String" value="IRRI2023"/>
+    <contextParameter xmi:id="_M0lDX9tjEfCab76HryCQgQ" comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" type="id_String" value="x3v12"/>
+    <contextParameter xmi:id="_M0lDYNtjEfCab76HryCQgQ" comment="" name="Sage_X3_Collate_Type" prompt="Sage_X3_Collate_Type?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_M0lDYdtjEfCab76HryCQgQ" confirmationNeeded="false" name="TEST">
+    <contextParameter xmi:id="_M0lDYttjEfCab76HryCQgQ" comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" type="id_String" value="ETL_USR"/>
+    <contextParameter xmi:id="_M0lDY9tjEfCab76HryCQgQ" comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" type="id_String" value="instance=X3V12T"/>
+    <contextParameter xmi:id="_M0lDZNtjEfCab76HryCQgQ" comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_M0lDZdtjEfCab76HryCQgQ" comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" type="id_String" value="aratika"/>
+    <contextParameter xmi:id="_M0lDZttjEfCab76HryCQgQ" comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:fA4vu3aYCxuFB43TS0eZI+2L0WNCqUwhVjW1sgW9e0GiU3HMkAwQ"/>
+    <contextParameter xmi:id="_M0lDZ9tjEfCab76HryCQgQ" comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" type="id_String" value="IRRIDEV"/>
+    <contextParameter xmi:id="_M0lDaNtjEfCab76HryCQgQ" comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" type="id_String" value="x3v12t"/>
+    <contextParameter xmi:id="_M0lDadtjEfCab76HryCQgQ" comment="" name="Sage_X3_Collate_Type" prompt="Sage_X3_Collate_Type?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

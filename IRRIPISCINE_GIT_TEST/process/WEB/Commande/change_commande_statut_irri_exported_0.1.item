@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="server" prompt="server?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="context_values"/>
+    <contextParameter comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="TEST_TALEND"/>
+    <contextParameter comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="usr_Talend"/>
+    <contextParameter comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="tLogcatcher"/>
+    <contextParameter comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_Password" value="enc:system.encryption.key.v1:0f0KpPL5VLwRAzeMTeGvOmyXoZlPbR2+DwotRm1QSWrXixr0WfGGBgY="/>
+    <contextParameter comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="localhost"/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Date_EtatCommande_Web" prompt="Last_Exec_Date_EtatCommande_Web?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Date_Stock" prompt="Last_Exec_Date_Stock?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_base_price" name="Last_Exec_Date_Tarif_Catalogue" prompt="Last_Exec_Date_Tarif_Catalogue?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_special_price" name="Last_Exec_Date_Tarif_Promo" prompt="Last_Exec_Date_Tarif_Promo?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Heure_EtatCommande_Web" prompt="Last_Exec_Heure_EtatCommande_Web?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Heure_Stock" prompt="Last_Exec_Heure_Stock?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_base_price" name="Last_Exec_Heure_Tarif_Catalogue" prompt="Last_Exec_Heure_Tarif_Catalogue?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_special_price" name="Last_Exec_Heure_Tarif_Promo" prompt="Last_Exec_Heure_Tarif_Promo?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_authorization" prompt="Magento_authorization?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_password" prompt="Magento_password?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_store_id_esp" prompt="Magento_store_id_esp?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Numéro Magasin web FR" name="Magento_store_id_fr" prompt="Magento_store_id_fr?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_url" prompt="Magento_url?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_url_esp" prompt="Magento_url_esp?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_username" prompt="Magento_username?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Last_Exec_PIM_X3" prompt="Last_Exec_PIM_X3?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_authorization" prompt="Pim_authorization?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_base64ClientIdSecret" prompt="Pim_base64ClientIdSecret?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_clientId" prompt="Pim_clientId?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_password" prompt="Pim_password?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_secret" prompt="Pim_secret?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_url" prompt="Pim_url?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_username" prompt="Pim_username?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="instance=X3V12T"/>
+    <contextParameter comment="" name="Sage_X3_Collate_Type" prompt="Sage_X3_Collate_Type?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="x3v12t"/>
+    <contextParameter comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="ETL_USR"/>
+    <contextParameter comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_Password" value="enc:system.encryption.key.v1:F0oqplT5/wXmK9lV+m0ZB3U0ZqyQOBTU62gZzqx3cqjxCiMGvnBb"/>
+    <contextParameter comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="IRRIDEV"/>
+    <contextParameter comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="aratika"/>
+  </context>
+  <context confirmationNeeded="false" name="TEST">
+    <contextParameter comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="server" prompt="server?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="context_values"/>
+    <contextParameter comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="TEST_TALEND"/>
+    <contextParameter comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="usr_Talend"/>
+    <contextParameter comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="tLogcatcher"/>
+    <contextParameter comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_Password" value="enc:system.encryption.key.v1:DJPBtosbpg2r02vDyrgVMHPqZAiznoP7MgxNFs6WOmBZsWzDiPH2cwU="/>
+    <contextParameter comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="localhost"/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Date_EtatCommande_Web" prompt="Last_Exec_Date_EtatCommande_Web?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Date_Stock" prompt="Last_Exec_Date_Stock?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_base_price" name="Last_Exec_Date_Tarif_Catalogue" prompt="Last_Exec_Date_Tarif_Catalogue?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_special_price" name="Last_Exec_Date_Tarif_Promo" prompt="Last_Exec_Date_Tarif_Promo?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Heure_EtatCommande_Web" prompt="Last_Exec_Heure_EtatCommande_Web?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Heure_Stock" prompt="Last_Exec_Heure_Stock?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_base_price" name="Last_Exec_Heure_Tarif_Catalogue" prompt="Last_Exec_Heure_Tarif_Catalogue?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_special_price" name="Last_Exec_Heure_Tarif_Promo" prompt="Last_Exec_Heure_Tarif_Promo?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_authorization" prompt="Magento_authorization?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_password" prompt="Magento_password?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_store_id_esp" prompt="Magento_store_id_esp?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Numéro Magasin web FR" name="Magento_store_id_fr" prompt="Magento_store_id_fr?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_url" prompt="Magento_url?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_url_esp" prompt="Magento_url_esp?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_username" prompt="Magento_username?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Last_Exec_PIM_X3" prompt="Last_Exec_PIM_X3?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_authorization" prompt="Pim_authorization?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_base64ClientIdSecret" prompt="Pim_base64ClientIdSecret?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_clientId" prompt="Pim_clientId?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_password" prompt="Pim_password?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_secret" prompt="Pim_secret?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_url" prompt="Pim_url?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_username" prompt="Pim_username?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="instance=X3V12T"/>
+    <contextParameter comment="" name="Sage_X3_Collate_Type" prompt="Sage_X3_Collate_Type?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="x3v12t"/>
+    <contextParameter comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="ETL_USR"/>
+    <contextParameter comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_Password" value="enc:system.encryption.key.v1:64CIMmtOzlugrUIVPkg5QGcTb/MrXkS0oEvaYZ7OEBYpDkPhHAYQ"/>
+    <contextParameter comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="IRRIDEV"/>
+    <contextParameter comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="aratika"/>
+  </context>
+  <context confirmationNeeded="false" name="PROD">
+    <contextParameter comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="server" prompt="server?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="context_values"/>
+    <contextParameter comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="PROD_TALEND"/>
+    <contextParameter comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="usr_Talend"/>
+    <contextParameter comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="tLogcatcher"/>
+    <contextParameter comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_Password" value="enc:system.encryption.key.v1:nnD539IIqMuxu66b/HS26VyJdywE4NOT48Q438O5bUIQI4CPbP8qyGE="/>
+    <contextParameter comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="anaa"/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Date_EtatCommande_Web" prompt="Last_Exec_Date_EtatCommande_Web?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Date_Stock" prompt="Last_Exec_Date_Stock?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_base_price" name="Last_Exec_Date_Tarif_Catalogue" prompt="Last_Exec_Date_Tarif_Catalogue?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_special_price" name="Last_Exec_Date_Tarif_Promo" prompt="Last_Exec_Date_Tarif_Promo?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Heure_EtatCommande_Web" prompt="Last_Exec_Heure_EtatCommande_Web?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Heure_Stock" prompt="Last_Exec_Heure_Stock?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_base_price" name="Last_Exec_Heure_Tarif_Catalogue" prompt="Last_Exec_Heure_Tarif_Catalogue?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_special_price" name="Last_Exec_Heure_Tarif_Promo" prompt="Last_Exec_Heure_Tarif_Promo?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_authorization" prompt="Magento_authorization?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_password" prompt="Magento_password?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_store_id_esp" prompt="Magento_store_id_esp?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Numéro Magasin web FR" name="Magento_store_id_fr" prompt="Magento_store_id_fr?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_url" prompt="Magento_url?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_url_esp" prompt="Magento_url_esp?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_username" prompt="Magento_username?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Last_Exec_PIM_X3" prompt="Last_Exec_PIM_X3?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_authorization" prompt="Pim_authorization?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_base64ClientIdSecret" prompt="Pim_base64ClientIdSecret?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_clientId" prompt="Pim_clientId?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_password" prompt="Pim_password?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_secret" prompt="Pim_secret?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_url" prompt="Pim_url?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_username" prompt="Pim_username?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="instance=X3V12"/>
+    <contextParameter comment="" name="Sage_X3_Collate_Type" prompt="Sage_X3_Collate_Type?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="x3v12"/>
+    <contextParameter comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="ETL_USR"/>
+    <contextParameter comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_Password" value="enc:system.encryption.key.v1:wgFYfP8tyvUqZXws8c+IMPcjrTtMrma7vNrsixwcRJdxu1XwrIYQ"/>
+    <contextParameter comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="IRRI2023"/>
+    <contextParameter comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="TENARARO"/>
+  </context>
+  <context confirmationNeeded="false" name="PREPROD">
+    <contextParameter comment="" name="ETL_Main_Dir" prompt="ETL_Main_Dir?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Job" prompt="Sage_X3_Dir_Job?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Pim_Txt" prompt="Sage_X3_Dir_Pim_Txt?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Sta" prompt="Sage_X3_Dir_Sta?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra" prompt="Sage_X3_Dir_Tra?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Dir_Tra_WS" prompt="Sage_X3_Dir_Tra_WS?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="server" prompt="server?" promptNeeded="false" repositoryContextId="_deLS0NmmEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_AdditionalParams" prompt="localhost_MSSQL_AdditionalParams?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value=""/>
+    <contextParameter comment="" name="localhost_MSSQL_CtxTb" prompt="localhost_MSSQL_CtxTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="context_values"/>
+    <contextParameter comment="" name="localhost_MSSQL_Database" prompt="localhost_MSSQL_Database?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="PREPROD_TALEND"/>
+    <contextParameter comment="" name="localhost_MSSQL_Login" prompt="localhost_MSSQL_Login?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="usr_Talend"/>
+    <contextParameter comment="" name="localhost_MSSQL_LogTb" prompt="localhost_MSSQL_LogTb?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="tLogcatcher"/>
+    <contextParameter comment="" name="localhost_MSSQL_Password" prompt="localhost_MSSQL_Password?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_Password" value="enc:system.encryption.key.v1:q+vi3nfs6XkfFiA2fia2TI95rZ5ANygITKDnpbO0dl1ixW5iVTLCvzE="/>
+    <contextParameter comment="" name="localhost_MSSQL_Port" prompt="localhost_MSSQL_Port?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="1433"/>
+    <contextParameter comment="" name="localhost_MSSQL_Schema" prompt="localhost_MSSQL_Schema?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="dbo"/>
+    <contextParameter comment="" name="localhost_MSSQL_Server" prompt="localhost_MSSQL_Server?" promptNeeded="false" repositoryContextId="_1KQ1ANmjEeuvpq-AmIcqPg" type="id_String" value="mataiva"/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Date_EtatCommande_Web" prompt="Last_Exec_Date_EtatCommande_Web?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Date_Stock" prompt="Last_Exec_Date_Stock?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_base_price" name="Last_Exec_Date_Tarif_Catalogue" prompt="Last_Exec_Date_Tarif_Catalogue?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Date d'exécution du job SX3_MGT_special_price" name="Last_Exec_Date_Tarif_Promo" prompt="Last_Exec_Date_Tarif_Promo?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_etat_cde" name="Last_Exec_Heure_EtatCommande_Web" prompt="Last_Exec_Heure_EtatCommande_Web?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_inventory_delta" name="Last_Exec_Heure_Stock" prompt="Last_Exec_Heure_Stock?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_base_price" name="Last_Exec_Heure_Tarif_Catalogue" prompt="Last_Exec_Heure_Tarif_Catalogue?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Heure d'exécution du job SX3_MGT_special_price" name="Last_Exec_Heure_Tarif_Promo" prompt="Last_Exec_Heure_Tarif_Promo?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_authorization" prompt="Magento_authorization?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_password" prompt="Magento_password?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_store_id_esp" prompt="Magento_store_id_esp?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="Numéro Magasin web FR" name="Magento_store_id_fr" prompt="Magento_store_id_fr?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_url" prompt="Magento_url?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_url_esp" prompt="Magento_url_esp?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Magento_username" prompt="Magento_username?" promptNeeded="false" repositoryContextId="_IksgUGTAEeyYfs6YLjZ53w" type="id_String" value=""/>
+    <contextParameter comment="" name="Last_Exec_PIM_X3" prompt="Last_Exec_PIM_X3?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_authorization" prompt="Pim_authorization?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_base64ClientIdSecret" prompt="Pim_base64ClientIdSecret?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_clientId" prompt="Pim_clientId?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_password" prompt="Pim_password?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_secret" prompt="Pim_secret?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_url" prompt="Pim_url?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Pim_username" prompt="Pim_username?" promptNeeded="false" repositoryContextId="_ZBLvkN83EeuJbdMUngmMIg" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_AdditionalParams" prompt="Sage_X3_AdditionalParams?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="instance=X3V12T"/>
+    <contextParameter comment="" name="Sage_X3_Collate_Type" prompt="Sage_X3_Collate_Type?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value=""/>
+    <contextParameter comment="" name="Sage_X3_Database" prompt="Sage_X3_Database?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="x3v12t"/>
+    <contextParameter comment="" name="Sage_X3_Login" prompt="Sage_X3_Login?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="ETL_USR"/>
+    <contextParameter comment="" name="Sage_X3_Password" prompt="Sage_X3_Password?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_Password" value="enc:system.encryption.key.v1:kA9EiR1ABOG0j6LGZ1gmyIhHC3YnOenwzKLPfMnmmV8yypnnqIBl"/>
+    <contextParameter comment="" name="Sage_X3_Port" prompt="Sage_X3_Port?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="1433"/>
+    <contextParameter comment="" name="Sage_X3_Schema" prompt="Sage_X3_Schema?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="PREPROD"/>
+    <contextParameter comment="" name="Sage_X3_Server" prompt="Sage_X3_Server?" promptNeeded="false" repositoryContextId="_wKof4N2hEeuuapC96h4RQw" type="id_String" value="aratika"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="96" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="true"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="true"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="_HR4msNltEeuwQ4b1YGXRew" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="tMSSqlInput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="JTDS"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;jdbc:jtds:sqlserver://localhost:1433/TEST_TALEND;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;net.sourceforge.jtds.jdbc.Driver&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Server"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Port"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Database" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_AdditionalParams"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Schema"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_Login"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:6HKFCx0eWT/mFrE199bdPuLkksEaB1/cgmsX/lUHsbGWl9gZV3qcR6heN9gBfX4/9RU1ZEB/EuUxyGmc"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="context.localhost_MSSQL_CtxTb"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="true"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="true"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="true"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Talend/TOS_ESB-20200219_1130-V7.3.1/Studio/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tMSSqlOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="JTDS" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.localhost_MSSQL_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.localhost_MSSQL_Port" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.localhost_MSSQL_Database" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="context.localhost_MSSQL_Database" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.localhost_MSSQL_AdditionalParams" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.localhost_MSSQL_Schema" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.localhost_MSSQL_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SIK4xOVV/k90eZQHjRmot1l42DaXcXEIWNeMj6tYMEig2daNUAcD/EbwToLX3ZA1BxCUxaT9GfEYT+I7" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="context.localhost_MSSQL_LogTb" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="true"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_f6VCkNftEeu69qB0VN7pEA" name="DataOperation"/>
+    <routinesParameter id="_f8toNtftEeu69qB0VN7pEA" name="Mathematical"/>
+    <routinesParameter id="_f9KUJtftEeu69qB0VN7pEA" name="Numeric"/>
+    <routinesParameter id="_f9dPFtftEeu69qB0VN7pEA" name="Relational"/>
+    <routinesParameter id="_f9wKBtftEeu69qB0VN7pEA" name="StringHandling"/>
+    <routinesParameter id="_f-DsBtftEeu69qB0VN7pEA" name="TalendDataGenerator"/>
+    <routinesParameter id="_f-Wm-dftEeu69qB0VN7pEA" name="TalendDate"/>
+    <routinesParameter id="_f-8c2dftEeu69qB0VN7pEA" name="TalendStringUtil"/>
+    <routinesParameter id="_f-ph6dftEeu69qB0VN7pEA" name="TalendString"/>
+    <routinesParameter id="_Tn54UN_oEeuCVZ9UNE7cGg" name="JSON_handling"/>
+    <routinesParameter id="_OgEuoB26Eequ9fwuTioUqw" name="API_handling"/>
+    <routinesParameter id="_BPz5kPiqEe2hD-pshhcqqw" name="SpecialChar"/>
+  </parameters>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="entity_id"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="170179&#xD;&#xD;&#xA;170347&#xD;&#xA;170430&#xD;&#xA;170431"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="entity_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_1-oRIBEoEe-vxoUelWPkKw-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out11">
+      <column comment="" key="false" length="-1" name="body" nullable="true" pattern="" precision="-1" sourceType="" type="id_Document" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="string" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out11">
+        <mapperTableEntries name="body" type="id_Document" nullable="true"/>
+        <mapperTableEntries name="string" expression="&quot; {  \&quot;entity\&quot;: { \&quot;entity_id\&quot;: &quot; + row38.entity_id + &quot;, \&quot;extension_attributes\&quot;: {   \&quot;irri_exported_erp\&quot;: \&quot;0\&quot; }  } } &quot; " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row38" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="entity_id" type="id_Integer" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="context.Magento_url + &quot;/V1/orders/&quot;"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
+    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/json"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="application/json"/>
+    <elementParameter field="TABLE" name="QUERY"/>
+    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" value="&quot;http://www.talend.org/rest/&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC" show="false"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;username&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="enc:system.encryption.key.v1:r0CskZQxPgM449l01x2XzLBM1AdJEOYKXcM5EAQh2qz7aLz0ML0=" show="false"/>
+    <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROLE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
+    <elementParameter field="TEXT" name="CORRELATION_VALUE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CHECK_SERVER_IDENTITY" value="true"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
+    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
+    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_WEBCLIENT_OPERATION_REPORTING" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="true"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false"/>
+    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="TABLE" name="HEADERS">
+      <elementValue elementRef="NAME" value="&quot;Authorization&quot;"/>
+      <elementValue elementRef="VALUE" value="context.Magento_authorization"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
+    <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
+    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="8080" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="enc:system.encryption.key.v1:/YGGGAeVVZK6/IzpYixItaAfZ3xaZdoiqr8XBzAO" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRESTClient_1">
+      <column comment="" key="false" length="-1" name="body" nullable="true" pattern="" precision="-1" sourceType="" type="id_Document" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="string" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="RESPONSE" name="RESPONSE">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FAULT" name="FAULT">
+      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="statusCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="body"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="string"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_2">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="-32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String jsonConnexion = &quot;{\&quot;grant_type\&quot;:\&quot;password\&quot;,\&quot;username\&quot;:\&quot;&quot;+context.Magento_username+&quot;\&quot;,\&quot;password\&quot;:\&quot;&quot;+context.Magento_password+&quot;\&quot;}&quot;;&#xA;API_handling.writeFile(JSON_handling.JsonFormatter(jsonConnexion, 4), context.ETL_Main_Dir + &quot;/connexion/&quot;, &quot;connexion_Magento.json&quot;);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>File Connexion&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Ecrire le fichier de connexion à Magento"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tHttpRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="-32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHttpRequest_1" show="false"/>
+    <elementParameter field="TEXT" name="URI" value="context.Magento_url + &quot;/all/V1/integration/admin/token&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD_CHOSED" value="POST"/>
+    <elementParameter field="FILE" name="POST_PARAMS_FROM_FILE" value="context.ETL_Main_Dir + &quot;/CONNEXION/connexion_Magento.json&quot;"/>
+    <elementParameter field="CHECK" name="OUT_TO_FILE" value="true"/>
+    <elementParameter field="FILE" name="OUT_FILE_NAME" value="context.ETL_Main_Dir + &quot;/CONNEXION/token_Magento.json&quot;"/>
+    <elementParameter field="CHECK" name="CREATE_DIRS" value="false"/>
+    <elementParameter field="TABLE" name="HEADERS">
+      <elementValue elementRef="HEADER_NAME" value="&quot;Content-Type&quot;"/>
+      <elementValue elementRef="HEADER_VALUE" value="&quot;application/json&quot;"/>
+      <elementValue elementRef="HEADER_NAME" value="&quot;Authorization&quot;"/>
+      <elementValue elementRef="HEADER_VALUE" value="&quot;Basic &quot; + context.Magento_authorization"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="NEED_AUTHENTICATION" value="true"/>
+    <elementParameter field="TEXT" name="USR" value="context.Magento_username"/>
+    <elementParameter field="PASSWORD" name="PWD" value="enc:system.encryption.key.v1:Ddp0X/ZghKsw8IhIHWDPqVoAR463sJpR2mTk8tMNgXf6lEPEDK1Dy8fKLD7c8XB2JnFblQ=="/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="TIMEOUT_SETTING" value="false"/>
+    <elementParameter field="TEXT" name="CONNECT_TIMEOUT" value="30" show="false"/>
+    <elementParameter field="TEXT" name="READ_TIMEOUT" value="0" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>Connexion Magento&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Requête de connexion à l'API Magento"/>
+    <metadata connector="FLOW" name="tHttpRequest_1">
+      <column defaultValue="" key="false" length="0" name="ResponseContent" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="-32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="// Alimentation de la variable de contexte Magento_authorization et affichage de sa valeur dans la console&#xA;context.Magento_authorization = &quot;Bearer &quot;+ StringHandling.EREPLACE(input_row.ResponseContent, &quot;\&quot;&quot;, &quot;&quot;);&#xA;System.out.println(context.Magento_authorization);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>Enregistrement token&lt;/b>"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Enregistrement du token dans la variable de contexte : Magento_authorization"/>
+    <metadata connector="FLOW" name="tJavaRow_1"/>
+  </node>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="-32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="FLOW" label="row38" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row38" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out11" lineStyle="0" metaname="out11" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tRESTClient_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="body"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out11" show="false"/>
+  </connection>
+  <connection connectorName="RESPONSE" label="row2" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tLogRow_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tHttpRequest_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tHttpRequest_1" offsetLabelX="0" offsetLabelY="0" source="tHttpRequest_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <note opaque="true" posX="416" posY="512" sizeHeight="64" sizeWidth="96" text="Texte"/>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHttpRequest_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+</talendfile:ProcessType>
